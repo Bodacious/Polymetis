@@ -1,0 +1,334 @@
+<title>Polymetis Concept</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700&family=Atkinson+Hyperlegible:wght@400;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: the 3D model is the hero in a framed stage, view buttons above it, a cross-section strip and the spec list below. */
+:root {
+  --bg: #eef0f3;
+  --fg: #1d2129;
+  --muted: #5d6573;
+  --line: #d3d7de;
+  --surface: #ffffff;
+  --stage: #dfe3e9;
+  --stage-2: #c9cfd8;
+  --accent: #3f63b8;
+  --body-grey: #3a3d43;
+  --pinky: #ef7f93;
+  --ring: #a98de6;
+  --middle: #4fbfae;
+  --index: #f0b955;
+  --thumb: #6f98e3;
+  --font-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #14171c; --fg: #e7e9ee; --muted: #9aa2b1; --line: #2b3039;
+    --surface: #1b1f26; --stage: #1d2229; --stage-2: #0f1216; --accent: #8fb0ff;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #14171c; --fg: #e7e9ee; --muted: #9aa2b1; --line: #2b3039;
+  --surface: #1b1f26; --stage: #1d2229; --stage-2: #0f1216; --accent: #8fb0ff;
+  color-scheme: dark;
+}
+body { background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 1rem; line-height: 1.55; }
+.wrap {
+  max-width: 1100px; margin: 0 auto; padding-block: 32px 56px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 24px;
+}
+header { display: grid; gap: 8px; }
+.eyebrow { font-family: var(--font-mono); font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.1; margin: 0; text-wrap: balance; }
+h2 { font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; margin: 0; }
+p { margin: 0; max-width: 65ch; }
+.lede { color: var(--muted); }
+
+.viewbar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.viewbar span { color: var(--muted); font-size: .9rem; margin-right: 4px; }
+.viewbar button {
+  font: inherit; font-size: .9rem; color: var(--fg); background: var(--surface);
+  border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; cursor: pointer;
+}
+.viewbar button[aria-pressed="true"] { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+.viewbar button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.stage {
+  position: relative; width: 100%; aspect-ratio: 16 / 9; max-width: 100%;
+  border-radius: 16px; overflow: hidden;
+  background: radial-gradient(120% 90% at 50% 20%, var(--stage), var(--stage-2));
+  border: 1px solid var(--line);
+}
+.stage canvas { display: block; width: 100%; height: 100%; touch-action: none; }
+.stage .hint { position: absolute; left: 14px; bottom: 10px; font-size: .8rem; color: var(--muted); pointer-events: none; }
+.stage .fallback { position: absolute; inset: 0; display: grid; place-items: center; padding: 24px; text-align: center; color: var(--muted); }
+@media (max-width: 560px) { .stage { aspect-ratio: 4 / 3; } }
+
+.cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px 32px; }
+.cols section { display: grid; gap: 10px; align-content: start; min-width: 0; }
+.section-svg { overflow-x: auto; }
+.section-svg svg { display: block; width: 100%; min-width: 420px; height: auto; }
+dl { margin: 0; display: grid; grid-template-columns: max-content 1fr; gap: 6px 16px; }
+dt { color: var(--muted); }
+dd { margin: 0; font-variant-numeric: tabular-nums; }
+.swatches { display: flex; flex-wrap: wrap; gap: 10px 16px; }
+.swatches div { display: flex; align-items: center; gap: 8px; font-size: .9rem; }
+.swatches i { width: 16px; height: 16px; border-radius: 4px; display: inline-block; border: 1px solid rgba(0,0,0,.2); }
+.est { font-family: var(--font-mono); font-size: .75rem; color: var(--muted); border: 1px solid var(--line); border-radius: 4px; padding: 0 4px; margin-left: 4px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Polymetis · concept sketch</div>
+    <h1>Polymetis concept</h1>
+    <p class="lede">A dark grey 60-key HHKB Professional 2 layout with blank low-profile caps coloured by finger. The case outline, key positions and stack come from the design files and Gateron's drawings; the case finish and keycap shape are illustrative.</p>
+  </header>
+
+  <div class="viewbar" role="group" aria-label="Camera view">
+    <span>View:</span>
+    <button type="button" id="v-hero" aria-pressed="true">Three-quarter</button>
+    <button type="button" id="v-top" aria-pressed="false">Top</button>
+    <button type="button" id="v-side" aria-pressed="false">Side</button>
+    <button type="button" id="v-low" aria-pressed="false">Low angle</button>
+  </div>
+
+  <div class="stage" id="stage">
+    <canvas id="c" aria-label="3D model of the Polymetis keyboard"></canvas>
+    <div class="hint">Drag to rotate · scroll or pinch to zoom</div>
+  </div>
+
+  <div class="cols">
+    <section>
+      <h2>Height stack</h2>
+      <div class="section-svg">
+        <svg viewBox="0 0 560 220" role="img" aria-label="Cross-section of one key, drawn to scale, with layer thicknesses">
+          <!-- 10 px per mm; y = 200 is the underside of the bottom plate -->
+          <g font-family="var(--font-mono)" font-size="11">
+            <rect x="20" y="184" width="340" height="16" style="fill: var(--body-grey)"/>
+            <rect x="20" y="134" width="340" height="50" style="fill: var(--body-grey); opacity: .55"/>
+            <rect x="20" y="122" width="100" height="12" style="fill: var(--body-grey)"/>
+            <rect x="260" y="122" width="100" height="12" style="fill: var(--body-grey)"/>
+            <rect x="20" y="147" width="340" height="16" style="fill: #2f6b4a"/>
+            <rect x="130" y="163" width="118" height="18.7" rx="2" style="fill: #101113"/>
+            <rect x="120" y="122" width="140" height="25" style="fill: #101113"/>
+            <rect x="115" y="118" width="150" height="4" style="fill: #101113"/>
+            <rect x="130" y="88" width="120" height="30" rx="3" style="fill: #101113"/>
+            <rect x="172" y="70" width="36" height="18" style="fill: #101113"/>
+            <path d="M103 80 L277 80 L270 36 Q269 32 265 32 L115 32 Q111 32 110 36 Z" style="fill: var(--index)"/>
+            <g style="fill: var(--fg)">
+              <text x="370" y="196">bottom plate 1.6</text>
+              <text x="370" y="177">frame ≈ 5.0</text>
+              <text x="370" y="158">PCB 1.6</text>
+              <text x="370" y="145">gap 1.3</text>
+              <text x="370" y="131">top plate 1.2</text>
+              <text x="290" y="60">keycap ≈ 5</text>
+              <text x="140" y="176" style="fill: #e7e9ee">socket 1.87</text>
+              <text x="146" y="138" style="fill: #e7e9ee">KS-33</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <p class="lede">Plate, gap, PCB and socket figures are from Gateron's drawings. The frame thickness is calculated (1.3 + 1.6 + 1.87 = 4.77 mm, plus clearance) and will be confirmed in the frame step.</p>
+    </section>
+    <section>
+      <h2>Key figures</h2>
+      <dl>
+        <dt>Footprint</dt><dd>309.9 × 119.4 mm</dd>
+        <dt>Case height</dt><dd>≈ 7.8 mm <span class="est">est.</span></dd>
+        <dt>To cap tops</dt><dd>≈ 17 mm <span class="est">est.</span></dd>
+        <dt>Keys</dt><dd>60, HHKB Pro 2, 6.25u space bar</dd>
+        <dt>Switches</dt><dd>Gateron KS-33 on hot-swap sockets</dd>
+        <dt>Stabiliser</dt><dd>Space bar only (proposed)</dd>
+        <dt>USB-C</dt><dd>Back edge, right-hand end</dd>
+      </dl>
+      <div class="swatches" aria-label="Finger colours">
+        <div><i style="background: var(--pinky)"></i>Little finger</div>
+        <div><i style="background: var(--ring)"></i>Ring</div>
+        <div><i style="background: var(--middle)"></i>Middle</div>
+        <div><i style="background: var(--index)"></i>Index</div>
+        <div><i style="background: var(--thumb)"></i>Thumb</div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script>
+(function () {
+  const stage = document.getElementById("stage");
+  const canvas = document.getElementById("c");
+  if (!window.THREE) {
+    const f = document.createElement("div"); f.className = "fallback";
+    f.textContent = "The 3D viewer could not load. The figures below still describe the design.";
+    stage.appendChild(f); return;
+  }
+  const css = getComputedStyle(document.documentElement);
+  const tok = n => css.getPropertyValue(n).trim();
+
+  const U = 19.05;
+  const CASE_W = 309.94, CASE_D = 119.44, CASE_R = 5;
+  const BOTTOM_T = 1.6, FRAME_T = 5.0, TOP_T = 1.2;
+  const PLATE_Y = BOTTOM_T + FRAME_T + TOP_T;      // top surface of the top plate
+  const SWITCH_UP = 3.6, CAP_GAP = 0.6, CAP_H = 4.6;
+
+  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+  renderer.shadowMap.enabled = true;
+  renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+  renderer.outputEncoding = THREE.sRGBEncoding;
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(28, 16 / 9, 5, 3000);
+  const controls = new THREE.OrbitControls(camera, canvas);
+  controls.enableDamping = true;
+  controls.dampingFactor = 0.08;
+  controls.minDistance = 160;
+  controls.maxDistance = 900;
+  controls.maxPolarAngle = Math.PI * 0.49;
+  controls.target.set(0, 6, 0);
+
+  scene.add(new THREE.HemisphereLight(0xffffff, 0x404650, 0.75));
+  const key = new THREE.DirectionalLight(0xffffff, 0.85);
+  key.position.set(-160, 320, 220);
+  key.castShadow = true;
+  key.shadow.mapSize.set(2048, 2048);
+  Object.assign(key.shadow.camera, { left: -220, right: 220, top: 140, bottom: -140, near: 50, far: 900 });
+  key.shadow.bias = -0.0004;
+  scene.add(key);
+  const rim = new THREE.DirectionalLight(0xbfd2ff, 0.35);
+  rim.position.set(220, 120, -260);
+  scene.add(rim);
+
+  // Ground that only receives shadow
+  const ground = new THREE.Mesh(new THREE.PlaneGeometry(2000, 2000), new THREE.ShadowMaterial({ opacity: 0.22 }));
+  ground.rotation.x = -Math.PI / 2; ground.position.y = -2.5; ground.receiveShadow = true;
+  scene.add(ground);
+
+  function roundedRect(w, d, r) {
+    const s = new THREE.Shape(), x = -w / 2, y = -d / 2;
+    s.moveTo(x + r, y);
+    s.lineTo(x + w - r, y); s.quadraticCurveTo(x + w, y, x + w, y + r);
+    s.lineTo(x + w, y + d - r); s.quadraticCurveTo(x + w, y + d, x + w - r, y + d);
+    s.lineTo(x + r, y + d); s.quadraticCurveTo(x, y + d, x, y + d - r);
+    s.lineTo(x, y + r); s.quadraticCurveTo(x, y, x + r, y);
+    return s;
+  }
+  function slab(w, d, r, h, bevel, mat) {
+    const g = new THREE.ExtrudeGeometry(roundedRect(w - bevel * 2, d - bevel * 2, Math.max(r - bevel, 0.4)), {
+      depth: Math.max(h - bevel * 2, 0.01), bevelEnabled: bevel > 0, bevelThickness: bevel, bevelSize: bevel,
+      bevelSegments: 3, curveSegments: 6
+    });
+    g.rotateX(-Math.PI / 2);
+    g.translate(0, bevel, 0);
+    const m = new THREE.Mesh(g, mat);
+    m.castShadow = true; m.receiveShadow = true;
+    return m;
+  }
+
+  const srgb = c => new THREE.Color(c).convertSRGBToLinear();
+  const grey = srgb(tok("--body-grey") || "#3a3d43");
+  const plateMat = new THREE.MeshStandardMaterial({ color: grey, roughness: 0.62, metalness: 0.05 });
+  const frameMat = new THREE.MeshStandardMaterial({ color: grey.clone().multiplyScalar(0.86), roughness: 0.8 });
+  const switchMat = new THREE.MeshStandardMaterial({ color: srgb("#17191c"), roughness: 0.55 });
+  const portMat = new THREE.MeshStandardMaterial({ color: srgb("#0b0c0e"), roughness: 0.4, metalness: 0.4 });
+
+  // USB1 sits 14.02u from the left edge of the key area (top view)
+  const x0usb = () => -15 * U / 2 + 14.02 * U;
+  const kb = new THREE.Group();
+  const bottom = slab(CASE_W, CASE_D, CASE_R, BOTTOM_T, 0.4, plateMat);
+  const frame = slab(CASE_W, CASE_D, CASE_R, FRAME_T, 0.2, frameMat); frame.position.y = BOTTOM_T;
+  const top = slab(CASE_W, CASE_D, CASE_R, TOP_T, 0.35, plateMat); top.position.y = BOTTOM_T + FRAME_T;
+  kb.add(bottom, frame, top);
+
+  // Eight M2 screw heads along the long edges (plate hole positions)
+  const screwMat = new THREE.MeshStandardMaterial({ color: srgb("#222428"), roughness: 0.35, metalness: 0.6 });
+  [-148.8, -49.6, 49.6, 148.8].forEach(x => [-53.6, 53.6].forEach(z => {
+    const s = new THREE.Mesh(new THREE.CylinderGeometry(1.9, 1.9, 0.6, 20), screwMat);
+    s.position.set(x, PLATE_Y + 0.3, z); s.castShadow = true; kb.add(s);
+  }));
+
+  // USB-C opening on the back edge, right-hand end (top view)
+  const port = new THREE.Mesh(new THREE.BoxGeometry(9.2, 3.4, 4), portMat);
+  port.position.set(x0usb(), BOTTOM_T + FRAME_T / 2, -CASE_D / 2 + 1.2);
+  kb.add(port);
+
+  const FINGER = { P: "--pinky", R: "--ring", M: "--middle", I: "--index", T: "--thumb" };
+  const capMats = {};
+  for (const k in FINGER) capMats[k] = new THREE.MeshStandardMaterial({ color: srgb(tok(FINGER[k])), roughness: 0.48, metalness: 0 });
+
+  const rows = [
+    { x: 0, keys: [[1,"P"],[1,"P"],[1,"R"],[1,"M"],[1,"I"],[1,"I"],[1,"I"],[1,"I"],[1,"M"],[1,"R"],[1,"P"],[1,"P"],[1,"P"],[1,"P"],[1,"P"]] },
+    { x: 0, keys: [[1.5,"P"],[1,"P"],[1,"R"],[1,"M"],[1,"I"],[1,"I"],[1,"I"],[1,"I"],[1,"M"],[1,"R"],[1,"P"],[1,"P"],[1,"P"],[1.5,"P"]] },
+    { x: 0, keys: [[1.75,"P"],[1,"P"],[1,"R"],[1,"M"],[1,"I"],[1,"I"],[1,"I"],[1,"I"],[1,"M"],[1,"R"],[1,"P"],[1,"P"],[2.25,"P"]] },
+    { x: 0, keys: [[2.25,"P"],[1,"P"],[1,"R"],[1,"M"],[1,"I"],[1,"I"],[1,"I"],[1,"I"],[1,"M"],[1,"R"],[1,"P"],[1.75,"P"],[1,"P"]] },
+    { x: 1.25, keys: [[1,"T"],[1.5,"T"],[6.25,"T"],[1.5,"T"],[1,"T"]] }
+  ];
+  const x0 = -15 * U / 2, z0 = -5 * U / 2;
+  const capBase = PLATE_Y + SWITCH_UP + CAP_GAP;
+  rows.forEach((row, r) => {
+    let xu = row.x;
+    row.keys.forEach(([w, f]) => {
+      const cx = x0 + (xu + w / 2) * U, cz = z0 + (r + 0.5) * U;
+      const sw = slab(13.6, 13.6, 1.2, SWITCH_UP + 0.4, 0, switchMat);
+      sw.position.set(cx, PLATE_Y - 0.2, cz); kb.add(sw);
+      const cap = slab(w * U - 1.7, U - 1.7, 2.2, CAP_H, 1.1, capMats[f]);
+      cap.position.set(cx, capBase, cz); kb.add(cap);
+      xu += w;
+    });
+  });
+  scene.add(kb);
+
+  const VIEWS = {
+    hero: { pos: [-150, 210, 300], tgt: [0, 6, 6] },
+    top:  { pos: [0, 520, 0.01], tgt: [0, 0, 0] },
+    side: { pos: [0, 40, 420], tgt: [0, 8, 0] },
+    low:  { pos: [-300, 70, 190], tgt: [10, 8, 0] }
+  };
+  let anim = null;
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function goTo(name, instant) {
+    const v = VIEWS[name];
+    const fromP = camera.position.clone(), fromT = controls.target.clone();
+    const toP = new THREE.Vector3(...v.pos), toT = new THREE.Vector3(...v.tgt);
+    if (instant || reduce) { camera.position.copy(toP); controls.target.copy(toT); controls.update(); return; }
+    const t0 = performance.now(), dur = 700;
+    anim = now => {
+      const k = Math.min((now - t0) / dur, 1), e = k < .5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2;
+      camera.position.lerpVectors(fromP, toP, e); controls.target.lerpVectors(fromT, toT, e);
+      if (k >= 1) anim = null;
+    };
+  }
+  const buttons = { hero: "v-hero", top: "v-top", side: "v-side", low: "v-low" };
+  Object.entries(buttons).forEach(([name, id]) => {
+    document.getElementById(id).addEventListener("click", () => {
+      Object.values(buttons).forEach(b => document.getElementById(b).setAttribute("aria-pressed", String(b === id)));
+      goTo(name);
+    });
+  });
+
+  function resize() {
+    const w = stage.clientWidth, h = stage.clientHeight;
+    if (!w || !h) return;
+    renderer.setSize(w, h, false);
+    camera.aspect = w / h;
+    camera.fov = w / h < 1.5 ? 36 : 28;
+    camera.updateProjectionMatrix();
+  }
+  new ResizeObserver(resize).observe(stage);
+  resize();
+  goTo("hero", true);
+
+  (function loop(now) {
+    if (anim) anim(now);
+    controls.update();
+    renderer.render(scene, camera);
+    requestAnimationFrame(loop);
+  })(performance.now());
+})();
+</script>
