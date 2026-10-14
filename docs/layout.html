@@ -85,16 +85,8 @@ p { margin: 0; max-width: 65ch; }
   <header>
     <div class="eyebrow">Polymetis · 60 keys · Gateron KS-33</div>
     <h1>Polymetis layout</h1>
-    <p class="lede">HHKB Professional 2 layout: Backspace sits one row lower (on the Tab row), \ and ` move up to the number row, Control takes the Caps Lock spot, and the bottom row has one 6.25u spacebar. Each key is coloured by the finger that presses it.</p>
+    <p class="lede">HHKB Professional 2 layout: Backspace sits one row lower (on the Tab row), \ and ` move up to the number row, Control takes the Caps Lock spot, and the bottom row has one 6.25u spacebar. Every key, modifiers included, is coloured by the finger that presses it: five colours in all.</p>
   </header>
-
-  <div class="controls" role="group" aria-label="Modifier colouring">
-    <span>Modifier keys:</span>
-    <div class="seg">
-      <button type="button" id="mod-finger" aria-pressed="true">Finger colour (5 colours)</button>
-      <button type="button" id="mod-plain" aria-pressed="false">Plain (6 colours)</button>
-    </div>
-  </div>
 
   <div class="board">
     <svg id="kb" viewBox="0 0 1000 400" role="img" aria-label="Keyboard layout drawn to scale, keys coloured by finger"></svg>
@@ -206,13 +198,6 @@ p { margin: 0; max-width: 65ch; }
     });
   }
 
-  const bF = document.getElementById("mod-finger"), bP = document.getElementById("mod-plain");
-  function set(plain) {
-    bF.setAttribute("aria-pressed", String(!plain)); bP.setAttribute("aria-pressed", String(plain));
-    draw(plain);
-  }
-  bF.addEventListener("click", () => set(false));
-  bP.addEventListener("click", () => set(true));
-  set(false);
+  draw(false);
 })();
 </script>
