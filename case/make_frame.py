@@ -7,9 +7,10 @@ the thickness comes from the KS-33 stack:
 
     plate-to-PCB gap 1.30 (Gateron KS-33 drawing: 2.50 plate top to PCB top, 1.20 plate)
   + PCB 1.60
-  + hot-swap socket 1.87 below the PCB (Gateron KS-2P02B01-02 drawing)
-  + 0.23 clearance
-  = 5.00 mm
+  + tallest part under the PCB: flash U4, SOIC-8 208-mil, 2.16 max (Winbond W25Q16JV
+    datasheet); the hot-swap sockets are 1.87 (Gateron KS-2P02B01-02 drawing)
+  + 0.24 clearance
+  = 5.30 mm
 
 The USB-C receptacle hangs 3.26 mm below the PCB (HRO TYPE-C-31-M-12 drawing); it is cleared by
 the 16 mm USB opening in the frame and the matching notch in the bottom plate.
@@ -29,7 +30,7 @@ from shapely.geometry import Polygon, box
 from shapely.ops import unary_union
 
 HERE = Path(__file__).parent
-THICKNESS = 5.00
+THICKNESS = 5.30
 CLEARANCE = 0.30          # gap between PCB edge and frame wall
 USB_X = (116.0, 132.0)    # USB opening, unchanged from the original frame
 
