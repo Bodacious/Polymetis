@@ -6,5 +6,6 @@
   (lib (name "MX_Only")(type "KiCad")(uri "${KIPRJMOD}/MX_Only.pretty")(options "")(descr ""))
   (lib (name "random-keyboard-parts")(type "KiCad")(uri "${KIPRJMOD}/random-keyboard-parts.pretty")(options "")(descr ""))
   (lib (name "Type-C")(type "KiCad")(uri "${KIPRJMOD}/Type-C.pretty")(options "")(descr ""))
+  (lib (name "marbastlib-xp-gateron_lp")(type "KiCad")(uri "${KIPRJMOD}/marbastlib-xp-gateron_lp.pretty")(options "")(descr "Gateron KS-33 footprints from ebastler/marbastlib 6b0a9a7, CERN-OHL-P-2.0"))
   (lib (name "local")(type "KiCad")(uri "${KIPRJMOD}/local.pretty")(options "")(descr ""))
 )
