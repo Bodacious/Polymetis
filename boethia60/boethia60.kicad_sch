@@ -4461,12 +4461,6 @@
 		(uuid "57264a64-d424-4a20-9a4d-bd1dcbc4206e")
 	)
 	(junction
-		(at 161.29 137.16)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "57d7cfa4-f3a7-4718-ac29-f1789f843b83")
-	)
-	(junction
 		(at 212.09 35.56)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4737,12 +4731,6 @@
 		(uuid "b30df2a7-323a-46bc-bbb8-433c79d8e826")
 	)
 	(junction
-		(at 237.49 137.16)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b5310646-20f2-4471-8577-91bf1eabc039")
-	)
-	(junction
 		(at 223.52 24.13)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4947,12 +4935,6 @@
 		(uuid "ddf08ed0-b93f-432f-bc78-928426d35792")
 	)
 	(junction
-		(at 172.72 100.33)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "de2dc1aa-f10f-4808-a690-f8f50884ec55")
-	)
-	(junction
 		(at 288.29 111.76)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5059,12 +5041,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "fb11b4f9-e9f2-4f21-8da0-8e8c14a47370")
-	)
-	(junction
-		(at 248.92 100.33)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "fe425a38-7a92-4b51-8e9e-5b3492120af7")
 	)
 	(junction
 		(at 59.69 35.56)
@@ -5728,16 +5704,6 @@
 	)
 	(wire
 		(pts
-			(xy 242.57 125.73) (xy 248.92 125.73)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2dff822f-3968-4b02-a60e-9565f27f18de")
-	)
-	(wire
-		(pts
 			(xy 233.68 171.45) (xy 233.68 173.99)
 		)
 		(stroke
@@ -5835,16 +5801,6 @@
 			(type default)
 		)
 		(uuid "35022f3c-204c-487e-8754-2e292b2b5051")
-	)
-	(wire
-		(pts
-			(xy 172.72 125.73) (xy 172.72 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "36d54364-447b-43bc-8df3-b464683c42ec")
 	)
 	(wire
 		(pts
@@ -6148,16 +6104,6 @@
 	)
 	(wire
 		(pts
-			(xy 161.29 130.81) (xy 161.29 132.08)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "507d11a0-15b3-4223-9061-e5a3c3abf44a")
-	)
-	(wire
-		(pts
 			(xy 134.62 210.82) (xy 147.32 210.82)
 		)
 		(stroke
@@ -6195,16 +6141,6 @@
 			(type default)
 		)
 		(uuid "523bd50d-7b2a-4a12-8720-45cab30ae87d")
-	)
-	(wire
-		(pts
-			(xy 248.92 125.73) (xy 248.92 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "52a82728-8b58-4414-a72a-4cab62650892")
 	)
 	(wire
 		(pts
@@ -7348,16 +7284,6 @@
 	)
 	(wire
 		(pts
-			(xy 237.49 130.81) (xy 237.49 132.08)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9eab1d7d-b20f-4a51-be56-cd71592bac18")
-	)
-	(wire
-		(pts
 			(xy 212.09 54.61) (xy 212.09 55.88)
 		)
 		(stroke
@@ -7595,16 +7521,6 @@
 			(type default)
 		)
 		(uuid "b0e56091-842a-4e07-92c6-0154e27612e0")
-	)
-	(wire
-		(pts
-			(xy 166.37 125.73) (xy 172.72 125.73)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b0e86d4a-9007-49e3-8758-667854429627")
 	)
 	(wire
 		(pts
@@ -10242,7 +10158,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 162.56 50.8 0)
 			(effects
 				(font
@@ -10375,7 +10291,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 238.76 25.4 0)
 			(effects
 				(font
@@ -10442,7 +10358,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 264.16 50.8 0)
 			(effects
 				(font
@@ -11043,7 +10959,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 340.36 127 0)
 			(effects
 				(font
@@ -11110,7 +11026,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 111.76 50.8 0)
 			(effects
 				(font
@@ -11399,7 +11315,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 137.16 101.6 0)
 			(effects
 				(font
@@ -11466,7 +11382,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 391.16 25.4 0)
 			(effects
 				(font
@@ -11533,7 +11449,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 86.36 127 0)
 			(effects
 				(font
@@ -11679,7 +11595,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 289.56 25.4 0)
 			(effects
 				(font
@@ -11824,7 +11740,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 162.56 25.4 0)
 			(effects
 				(font
@@ -11969,7 +11885,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 365.76 76.2 0)
 			(effects
 				(font
@@ -12412,7 +12328,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 187.96 25.4 0)
 			(effects
 				(font
@@ -12742,84 +12658,6 @@
 	)
 	(symbol
 		(lib_id "Device:D_Small")
-		(at 161.29 134.62 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "32901b41-5c92-4246-a7a3-c218f11d93c4")
-		(property "Reference" "D_58"
-			(at 163.83 132.842 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "D"
-			(at 163.83 135.128 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_SOD-323"
-			(at 162.56 142.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 162.56 142.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 161.29 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Part" "C2128"
-			(at 161.29 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "10714e4e-13b0-4c93-861a-8f6ccc5df530")
-		)
-		(pin "2"
-			(uuid "94d9229a-fd82-4187-9021-86411d282a4b")
-		)
-		(instances
-			(project ""
-				(path "/ee756133-ce5d-4302-8df3-762da84ea123"
-					(reference "D_58")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D_Small")
 		(at 212.09 83.82 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -12922,7 +12760,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 314.96 101.6 0)
 			(effects
 				(font
@@ -13199,7 +13037,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 340.36 50.8 0)
 			(effects
 				(font
@@ -13946,7 +13784,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 314.96 25.4 0)
 			(effects
 				(font
@@ -14092,7 +13930,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 213.36 50.8 0)
 			(effects
 				(font
@@ -14159,7 +13997,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 238.76 50.8 0)
 			(effects
 				(font
@@ -14226,7 +14064,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 340.36 76.2 0)
 			(effects
 				(font
@@ -14437,7 +14275,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 187.96 76.2 0)
 			(effects
 				(font
@@ -14856,73 +14694,6 @@
 	)
 	(symbol
 		(lib_id "MX_Alps_Hybrid:MX-NoLED")
-		(at 162.56 127 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "5155aee3-4619-4594-a973-d66f4e6a9bcd")
-		(property "Reference" "K_58"
-			(at 162.56 121.0818 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Value" "space"
-			(at 162.56 129.54 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
-			(at 162.56 127 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 162.56 127 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 162.56 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "04396042-f1ff-4bff-9ba6-9f276c3202b8")
-		)
-		(pin "2"
-			(uuid "dcf0e5d8-757a-42f0-ac28-53b7d7b149d7")
-		)
-		(instances
-			(project ""
-				(path "/ee756133-ce5d-4302-8df3-762da84ea123"
-					(reference "K_58")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "MX_Alps_Hybrid:MX-NoLED")
 		(at 238.76 76.2 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -14947,7 +14718,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 238.76 76.2 0)
 			(effects
 				(font
@@ -15392,7 +15163,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_1.75u"
 			(at 35.56 76.2 0)
 			(effects
 				(font
@@ -15525,7 +15296,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_1.5u"
 			(at 391.16 50.8 0)
 			(effects
 				(font
@@ -15592,7 +15363,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 289.56 50.8 0)
 			(effects
 				(font
@@ -16053,7 +15824,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 187.96 101.6 0)
 			(effects
 				(font
@@ -16198,7 +15969,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 60.96 101.6 0)
 			(effects
 				(font
@@ -16466,84 +16237,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:D_Small")
-		(at 237.49 134.62 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "76a68ee9-b53c-4441-b8a8-7656ca78ae53")
-		(property "Reference" "D_60"
-			(at 240.03 132.842 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "D"
-			(at 240.03 135.128 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_SOD-323"
-			(at 238.76 142.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 238.76 142.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 237.49 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLCPCB Part" "C2128"
-			(at 237.49 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "7f3552be-0049-4341-8360-5a69f0fd3751")
-		)
-		(pin "2"
-			(uuid "4de52185-d6db-4e5f-93ec-282d203aff3c")
-		)
-		(instances
-			(project ""
-				(path "/ee756133-ce5d-4302-8df3-762da84ea123"
-					(reference "D_60")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector_Generic:Conn_01x06")
 		(at 119.38 241.3 180)
 		(unit 1)
@@ -16658,7 +16351,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 264.16 25.4 0)
 			(effects
 				(font
@@ -16791,7 +16484,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 213.36 25.4 0)
 			(effects
 				(font
@@ -16858,7 +16551,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 365.76 50.8 0)
 			(effects
 				(font
@@ -16925,7 +16618,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_1.5u"
 			(at 111.76 127 0)
 			(effects
 				(font
@@ -17245,7 +16938,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 137.16 25.4 0)
 			(effects
 				(font
@@ -17588,7 +17281,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 365.76 25.4 0)
 			(effects
 				(font
@@ -17889,7 +17582,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_1.5u"
 			(at 289.56 127 0)
 			(effects
 				(font
@@ -17956,7 +17649,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 137.16 76.2 0)
 			(effects
 				(font
@@ -18023,7 +17716,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 391.16 101.6 0)
 			(effects
 				(font
@@ -18168,7 +17861,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 111.76 25.4 0)
 			(effects
 				(font
@@ -18313,7 +18006,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 187.96 127 0)
 			(effects
 				(font
@@ -18459,7 +18152,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 213.36 76.2 0)
 			(effects
 				(font
@@ -18593,7 +18286,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 86.36 50.8 0)
 			(effects
 				(font
@@ -18660,7 +18353,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 264.16 101.6 0)
 			(effects
 				(font
@@ -19027,7 +18720,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 111.76 76.2 0)
 			(effects
 				(font
@@ -19094,7 +18787,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 314.96 50.8 0)
 			(effects
 				(font
@@ -19240,7 +18933,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 86.36 25.4 0)
 			(effects
 				(font
@@ -20228,7 +19921,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 187.96 50.8 0)
 			(effects
 				(font
@@ -20349,73 +20042,6 @@
 		)
 	)
 	(symbol
-		(lib_id "MX_Alps_Hybrid:MX-NoLED")
-		(at 238.76 127 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "bb2ef16a-697f-47a1-ac9d-4f90d9853526")
-		(property "Reference" "K_60"
-			(at 238.76 121.0818 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Value" "space"
-			(at 238.76 129.54 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
-			(at 238.76 127 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 238.76 127 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 238.76 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "257dd2cd-80d1-432a-92e7-b62e551e4944")
-		)
-		(pin "2"
-			(uuid "5eacf2d1-55d6-4436-ba33-b8d6c4c1a395")
-		)
-		(instances
-			(project ""
-				(path "/ee756133-ce5d-4302-8df3-762da84ea123"
-					(reference "K_60")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:D_Small")
 		(at 313.69 83.82 90)
 		(unit 1)
@@ -20519,7 +20145,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 86.36 101.6 0)
 			(effects
 				(font
@@ -20586,7 +20212,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 162.56 101.6 0)
 			(effects
 				(font
@@ -21020,7 +20646,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 35.56 25.4 0)
 			(effects
 				(font
@@ -21087,7 +20713,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 137.16 50.8 0)
 			(effects
 				(font
@@ -21154,7 +20780,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 60.96 25.4 0)
 			(effects
 				(font
@@ -21221,7 +20847,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 238.76 101.6 0)
 			(effects
 				(font
@@ -21288,7 +20914,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 213.36 101.6 0)
 			(effects
 				(font
@@ -21355,7 +20981,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_1.5u"
 			(at 35.56 50.8 0)
 			(effects
 				(font
@@ -21813,7 +21439,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 162.56 76.2 0)
 			(effects
 				(font
@@ -22024,7 +21650,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 86.36 76.2 0)
 			(effects
 				(font
@@ -22627,7 +22253,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 340.36 25.4 0)
 			(effects
 				(font
@@ -22773,7 +22399,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 289.56 101.6 0)
 			(effects
 				(font
@@ -23141,7 +22767,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_1.75u"
 			(at 365.76 101.6 0)
 			(effects
 				(font
@@ -23284,7 +22910,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 111.76 101.6 0)
 			(effects
 				(font
@@ -23429,7 +23055,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 289.56 76.2 0)
 			(effects
 				(font
@@ -23730,7 +23356,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 314.96 76.2 0)
 			(effects
 				(font
@@ -24030,7 +23656,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "local:SW_Hotswap_Kailh_Choc_V1V2_annotated"
+		(property "Footprint" "marbastlib-xp-gateron_lp:SW_KS33_HS_KS-2P02B01-02_HS_1u"
 			(at 264.16 76.2 0)
 			(effects
 				(font
