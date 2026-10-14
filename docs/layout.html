@@ -1,0 +1,218 @@
+<title>Polymetis Layout</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700&family=Atkinson+Hyperlegible:wght@400;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one column; the board drawing is the hero, legend and notes underneath. Key fills are physical cap colours, so they stay the same in both themes. */
+:root {
+  --bg: #f4f5f7;
+  --fg: #1d2129;
+  --muted: #5d6573;
+  --line: #d4d8de;
+  --case: #e2e5ea;
+  --case-edge: #c3c8d0;
+  --surface: #ffffff;
+  --accent: #3f63b8;
+  --legend-ink: #1b1d22;
+  --pinky: #f08a9b;
+  --ring: #b39ae8;
+  --middle: #5fc4b4;
+  --index: #f2c063;
+  --thumb: #7fa4e6;
+  --plain: #c5c9cf;
+  --font-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #15181d; --fg: #e7e9ee; --muted: #9aa2b1; --line: #2c313a;
+    --case: #23272f; --case-edge: #343a45; --surface: #1c2027; --accent: #8fb0ff;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #15181d; --fg: #e7e9ee; --muted: #9aa2b1; --line: #2c313a;
+  --case: #23272f; --case-edge: #343a45; --surface: #1c2027; --accent: #8fb0ff;
+  color-scheme: dark;
+}
+body {
+  background: var(--bg); color: var(--fg);
+  font-family: var(--font-body); font-size: 1rem; line-height: 1.55;
+}
+.wrap {
+  max-width: 1040px; margin: 0 auto;
+  padding-block: 32px 56px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 28px;
+}
+header { display: grid; gap: 8px; }
+.eyebrow { font-family: var(--font-mono); font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.1; margin: 0; text-wrap: balance; }
+h2 { font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; margin: 0; }
+p { margin: 0; max-width: 65ch; }
+.lede { color: var(--muted); }
+
+.controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.controls span { font-size: .9rem; color: var(--muted); }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; padding: 3px; background: var(--surface); }
+.seg button {
+  font: inherit; font-size: .9rem; border: 0; background: transparent; color: var(--fg);
+  padding: 6px 14px; border-radius: 999px; cursor: pointer;
+}
+.seg button[aria-pressed="true"] { background: var(--fg); color: var(--bg); }
+.seg button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.board { overflow-x: auto; }
+.board svg { display: block; width: 100%; min-width: 640px; height: auto; }
+.board .note { font-size: .85rem; color: var(--muted); margin-top: 8px; }
+
+.legend { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+.chip { display: grid; grid-template-columns: 22px 1fr; gap: 4px 10px; align-items: start; padding: 12px 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; min-width: 0; }
+.sw { width: 22px; height: 22px; border-radius: 5px; border: 1px solid rgba(0,0,0,.18); }
+.chip b { font-family: var(--font-display); font-weight: 700; }
+.chip .n { font-variant-numeric: tabular-nums; }
+.chip small { grid-column: 2; color: var(--muted); font-size: .82rem; line-height: 1.4; }
+
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px 32px; }
+.facts section { display: grid; gap: 8px; align-content: start; min-width: 0; }
+.facts ul { margin: 0; padding-left: 1.1em; display: grid; gap: 4px; }
+.mono { font-family: var(--font-mono); font-size: .9em; }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Polymetis · 60 keys · Gateron KS-33</div>
+    <h1>Polymetis layout</h1>
+    <p class="lede">HHKB Professional 2 layout: Backspace sits one row lower (on the Tab row), \ and ` move up to the number row, Control takes the Caps Lock spot, and the bottom row has one 6.25u spacebar. Each key is coloured by the finger that presses it.</p>
+  </header>
+
+  <div class="controls" role="group" aria-label="Modifier colouring">
+    <span>Modifier keys:</span>
+    <div class="seg">
+      <button type="button" id="mod-finger" aria-pressed="true">Finger colour (5 colours)</button>
+      <button type="button" id="mod-plain" aria-pressed="false">Plain (6 colours)</button>
+    </div>
+  </div>
+
+  <div class="board">
+    <svg id="kb" viewBox="0 0 1000 400" role="img" aria-label="Keyboard layout drawn to scale, keys coloured by finger"></svg>
+    <p class="note">Drawn to scale (1u = 19.05 mm). The solid line marks the centre of the space bar; the dotted line marks the centre of the case.</p>
+  </div>
+
+  <div class="legend" id="legend"></div>
+
+  <div class="facts">
+    <section>
+      <h2>How symmetric it is</h2>
+      <p>The bottom row is mirror-image: Alt, Cmd, Space, Cmd, Alt, with the same key sizes on both sides.</p>
+      <p>It is centred on your hands rather than on the case. The space bar's centre (6.875u from the left) is where the boundary between the left and right index fingers falls, averaged over the three letter rows (T|Y 6.5u, G|H 6.75u, B|N 7.25u). Centring it on the case instead would put it 0.6u to the right of that boundary and would also put the right-hand keys on top of the reset pad next to the RP2040.</p>
+      <p>The letter rows are HHKB-standard, so the right little finger covers more keys than the left (15 against 8). That comes from the HHKB layout itself.</p>
+    </section>
+    <section>
+      <h2>Key sizes</h2>
+      <ul>
+        <li><span class="mono">51 × 1u</span> letters, numbers, punctuation, Esc, Fn, Alt</li>
+        <li><span class="mono">4 × 1.5u</span> Tab, Backspace, both Cmd</li>
+        <li><span class="mono">2 × 1.75u</span> Control, right Shift</li>
+        <li><span class="mono">2 × 2.25u</span> Enter, left Shift</li>
+        <li><span class="mono">1 × 6.25u</span> Space</li>
+      </ul>
+      <p class="lede">Bottom row: 1.25u gap, Alt 1u, Cmd 1.5u, Space 6.25u, Cmd 1.5u, Alt 1u, 2.5u gap. Full row width is 15u.</p>
+    </section>
+  </div>
+</div>
+
+<script>
+(function () {
+  const U = 60, PAD = 14, GAP = 4;
+  const FINGERS = {
+    P: { name: "Little finger", v: "--pinky" },
+    R: { name: "Ring finger", v: "--ring" },
+    M: { name: "Middle finger", v: "--middle" },
+    I: { name: "Index finger", v: "--index" },
+    T: { name: "Thumb", v: "--thumb" },
+    N: { name: "Plain modifiers", v: "--plain" }
+  };
+  // [legend, width in u, finger, isModifier]
+  const rows = [
+    { x: 0, keys: [["Esc",1,"P"],["1",1,"P"],["2",1,"R"],["3",1,"M"],["4",1,"I"],["5",1,"I"],["6",1,"I"],["7",1,"I"],["8",1,"M"],["9",1,"R"],["0",1,"P"],["-",1,"P"],["=",1,"P"],["\\",1,"P"],["`",1,"P"]] },
+    { x: 0, keys: [["Tab",1.5,"P",1],["Q",1,"P"],["W",1,"R"],["E",1,"M"],["R",1,"I"],["T",1,"I"],["Y",1,"I"],["U",1,"I"],["I",1,"M"],["O",1,"R"],["P",1,"P"],["[",1,"P"],["]",1,"P"],["Bksp",1.5,"P",1]] },
+    { x: 0, keys: [["Ctrl",1.75,"P",1],["A",1,"P"],["S",1,"R"],["D",1,"M"],["F",1,"I"],["G",1,"I"],["H",1,"I"],["J",1,"I"],["K",1,"M"],["L",1,"R"],[";",1,"P"],["'",1,"P"],["Enter",2.25,"P",1]] },
+    { x: 0, keys: [["Shift",2.25,"P",1],["Z",1,"P"],["X",1,"R"],["C",1,"M"],["V",1,"I"],["B",1,"I"],["N",1,"I"],["M",1,"I"],[",",1,"M"],[".",1,"R"],["/",1,"P"],["Shift",1.75,"P",1],["Fn",1,"P",1]] },
+    { x: 1.25, keys: [["Alt",1,"T",1],["Cmd",1.5,"T",1],["",6.25,"T"],["Cmd",1.5,"T",1],["Alt",1,"T",1]] }
+  ];
+  const W = 15 * U + PAD * 2, H = 5 * U + PAD * 2 + 26;
+  const svg = document.getElementById("kb");
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  const NS = "http://www.w3.org/2000/svg";
+  // CSS variables go through style so every browser resolves them in SVG
+  const el = (n, a) => {
+    const e = document.createElementNS(NS, n);
+    for (const k in a) {
+      if (String(a[k]).includes("var(")) e.style.setProperty(k, a[k]); else e.setAttribute(k, a[k]);
+    }
+    return e;
+  };
+
+  function draw(plainMods) {
+    svg.replaceChildren();
+    svg.appendChild(el("rect", { x: 1, y: 1, width: W - 2, height: 5 * U + PAD * 2 - 2, rx: 14, fill: "var(--case)", stroke: "var(--case-edge)" }));
+    // centre lines
+    const sx = PAD + 6.875 * U, cx = PAD + 7.5 * U, top = PAD - 6, bot = PAD + 5 * U + 6;
+    svg.appendChild(el("line", { x1: cx, y1: top, x2: cx, y2: bot, stroke: "var(--muted)", "stroke-width": 1.5, "stroke-dasharray": "2 5" }));
+    svg.appendChild(el("line", { x1: sx, y1: top, x2: sx, y2: bot, stroke: "var(--fg)", "stroke-width": 1.5 }));
+    const l1 = el("text", { x: sx - 6, y: H - 8, fill: "var(--fg)", "font-family": "var(--font-body)", "font-size": 13, "text-anchor": "end" });
+    l1.textContent = "space bar centre 6.875u"; svg.appendChild(l1);
+    const l2 = el("text", { x: cx + 6, y: H - 8, fill: "var(--muted)", "font-family": "var(--font-body)", "font-size": 13 });
+    l2.textContent = "case centre 7.5u"; svg.appendChild(l2);
+    const counts = {};
+    rows.forEach((row, r) => {
+      let x = row.x;
+      row.keys.forEach(([lab, w, f, mod]) => {
+        const fk = plainMods && mod ? "N" : f;
+        counts[fk] = counts[fk] || { n: 0, sizes: {} };
+        counts[fk].n++; counts[fk].sizes[w] = (counts[fk].sizes[w] || 0) + 1;
+        const px = PAD + x * U + GAP / 2, py = PAD + r * U + GAP / 2, pw = w * U - GAP, ph = U - GAP;
+        const g = el("g", {});
+        g.appendChild(el("rect", { x: px, y: py, width: pw, height: ph, rx: 7, fill: `var(${FINGERS[fk].v})`, stroke: "rgba(0,0,0,.22)" }));
+        g.appendChild(el("rect", { x: px + 5, y: py + 4, width: pw - 10, height: ph - 13, rx: 5, fill: "rgba(255,255,255,.22)" }));
+        if (lab) {
+          const t = el("text", { x: px + 9, y: py + 21, fill: "var(--legend-ink)", "font-family": "var(--font-mono)", "font-size": lab.length > 1 ? 12 : 15 });
+          t.textContent = lab; g.appendChild(t);
+        }
+        if (w !== 1) {
+          const s = el("text", { x: px + pw - 8, y: py + ph - 10, fill: "rgba(27,29,34,.65)", "font-family": "var(--font-mono)", "font-size": 10, "text-anchor": "end" });
+          s.textContent = w + "u"; g.appendChild(s);
+        }
+        svg.appendChild(g);
+        x += w;
+      });
+    });
+    legend(counts);
+  }
+
+  function legend(counts) {
+    const box = document.getElementById("legend");
+    box.replaceChildren();
+    ["P","R","M","I","T","N"].forEach(k => {
+      if (!counts[k]) return;
+      const c = counts[k];
+      const sizes = Object.keys(c.sizes).map(Number).sort((a, b) => a - b).map(s => `${c.sizes[s]} × ${s}u`).join(", ");
+      const d = document.createElement("div"); d.className = "chip";
+      d.innerHTML = `<div class="sw" style="background:var(${FINGERS[k].v})"></div><div><b>${FINGERS[k].name}</b> <span class="n">· ${c.n} keys</span></div><small>${sizes}</small>`;
+      box.appendChild(d);
+    });
+  }
+
+  const bF = document.getElementById("mod-finger"), bP = document.getElementById("mod-plain");
+  function set(plain) {
+    bF.setAttribute("aria-pressed", String(!plain)); bP.setAttribute("aria-pressed", String(plain));
+    draw(plain);
+  }
+  bF.addEventListener("click", () => set(false));
+  bP.addEventListener("click", () => set(true));
+  set(false);
+})();
+</script>
