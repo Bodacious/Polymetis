@@ -1,8 +1,13 @@
 # Polymetis
 
-Gavin Morrice's keyboard: a fork of arviceblot/boethia60 being turned into a 60-key HHKB Professional 2 layout with a one-piece 6.25u spacebar on Gateron KS-33 low-profile switches.
+Gavin Morrice's keyboard: a fork of arviceblot/boethia60 turned into a 60-key HHKB Professional 2 layout with a one-piece 6.25u spacebar on Gateron KS-33 low-profile switches.
 
-Read `HANDOVER.md` before doing anything. It holds the decisions already made, measured facts about the board files, the exact bottom-row coordinates, the step-by-step work plan and the points where you must stop and ask Gavin.
+Aims:
+- Low action: short key travel, keys that are easy to glide over. Short travel matters more than a light press.
+- HHKB Professional 2 layout, exactly.
+- Function keys on a Fn layer (e.g. Fn+P play/pause), remappable in Vial.
+
+Read `HANDOVER.md` before doing anything. It holds the decisions already made, the Fn layer, the current status, the next steps and the points where you must stop and ask Gavin.
 
 Ground rules:
 - Work on `main`.

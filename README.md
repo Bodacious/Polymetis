@@ -20,7 +20,7 @@ The layout is drawn to scale, with keys coloured by finger, in [`docs/layout.htm
 | Top plate | 1.6 mm FR4 | 1.2 mm FR4, 14.00 mm switch cut-outs |
 | Bottom plate | 1.6 mm FR4 | 1.6 mm FR4 with a notch for the USB-C receptacle |
 | Frame | 4.0 mm | 5.3 mm, cavity sized to the PCB |
-| Firmware layers | 3 | 2 (base and HHKB Fn layer) |
+| Firmware layers | 3 | 2 (base and Fn layer with F1–F12, media and arrows) |
 
 The HHKB Professional 2 bottom row has a 6u space bar and a 1.5u gap on the left. Polymetis uses a 6.25u space bar, which low-profile keycap sets include, and takes the extra 0.25u from the left gap. The right-hand bottom keys stay where they were, clear of the RP2040, reset pad and boot button. The space bar is centred 6.875u from the left edge, which is where the boundary between the two index fingers falls when averaged over the three letter rows.
 
@@ -28,7 +28,7 @@ The HHKB Professional 2 bottom row has a 6u space bar and a 1.5u gap on the left
 
 | Part | Quantity | Notes |
 |---|---|---|
-| Gateron KS-33 Low Profile 2.0 switch | 60 | any KS-33 variant |
+| Gateron KS-33 Low Profile 2.0 switch, linear (Red) | 60 | 3.0 mm total travel, 1.7 mm to actuation, 50 gf (Gateron drawing); chosen for short travel |
 | Gateron KS-2P02B01-02 low-profile hot-swap socket | 60 | JLCPCB lists it as C18212911; zero stock in October 2026, so plan to solder them by hand |
 | Gateron low-profile plate-mounted stabiliser, 6.25U (KS-57B623T) | 1 | sold in a 60% set with four 2U; only the 6.25U is used |
 | Main PCB, 1.6 mm, with JLCPCB assembly | 1 | files in `jlcpcb/` |
@@ -76,7 +76,29 @@ The space bar row is only 7.9 mm from the PCB's front edge, so the stabiliser is
 
 ## Firmware
 
-RMK 0.5 with Vial, in `firmware/`. Layer 0 is the HHKB Professional 2 base layer; layer 1 is the HHKB-style Fn layer (Fn is the key right of right Shift), with arrows on `[ ; ' /`, Home/End/PgUp/PgDn on `K L , .`, Delete on Fn + Backspace and Bootloader on Fn + Tab. Build with `cargo build --release` from `firmware/`; see `firmware/README.md` for flashing. Any key can be remapped live from the Vial app.
+RMK 0.5 with Vial, in `firmware/`. Layer 0 is the HHKB Professional 2 base layer. Layer 1 is the Fn layer: hold Fn (right of right Shift) and press
+
+| Keys | Function |
+|---|---|
+| `1` … `=` | F1 … F12 |
+| `\` / `` ` `` | Insert / Delete |
+| Backspace | Delete |
+| `I` `O` `P` | Previous track, next track, play/pause |
+| `A` `S` `D` `F` | Volume down, volume up, mute, eject |
+| `[` and `;` `'` `/` | Arrows: up, and left, right, down |
+| `K` `L` `,` `.` | Home, Page Up, End, Page Down |
+| Tab | Bootloader |
+
+Any key can be remapped live from the Vial app (or vial.rocks in Chrome), with no rebuild.
+
+### Building and flashing
+
+1. Install Rust with [rustup](https://rustup.rs) (the repo pins the toolchain) and cargo-make: `cargo install cargo-make`.
+2. From `firmware/`, run `cargo make uf2`. It builds the firmware and writes `boethia60.uf2`.
+3. The first time, hold the board's boot button while plugging in USB. Later, press Fn + Tab instead. The keyboard appears as a USB drive called RPI-RP2.
+4. Copy `boethia60.uf2` onto that drive. The keyboard restarts with the new firmware.
+
+`firmware/README.md` covers flashing with a debug probe instead.
 
 ## Design files
 
