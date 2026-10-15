@@ -25,8 +25,9 @@ Don't reopen these without asking Gavin.
 | Frame | 5.3 mm, one piece, printed by a professional service. |
 | Keycaps | As low as possible without hurting ease of build or quality; cross (MX) stems for KS-33. A flat, uniform profile suits the "not cobblestones" aim. Fit on KS-33 not yet confirmed. |
 | Keycap colours | Five colours, one per finger: thumb, index, middle, ring, little. Modifiers take the colour of the finger that presses them (Alt and Cmd thumb; Tab, Ctrl, Shift, Enter, Backspace, Fn little finger). [`docs/layout.html`](docs/layout.html) has the full colouring. |
-| Firmware | RMK 0.5 with Vial. Two layers: base and Fn. The old layer 2 is gone. USB product name stays `boethia60` unless Gavin says otherwise. |
-| Electronics | RP2040, USB-C and power circuit unchanged from the boethia60. |
+| Firmware | RMK 0.5 with Vial. Two layers: base and Fn. The old layer 2 is gone. The keyboard reports itself over USB as `Polymetis`. |
+| Electronics | RP2040, USB-C and power circuit unchanged from the boethia60, except F1: the original parts list fitted a ferrite bead (C1015) where the schematic has a 500 mA fuse, so F1 is now a real resettable fuse, SMD0805P050TF/12 (C90129: 500 mA hold, 1 A trip, 12 V), on the same 0805 footprint. |
+| Board text | "Polymetis" with "based on boethia60 by arviceblot" underneath, on the underside. |
 
 ## Fn layer
 
@@ -85,4 +86,3 @@ Defined in `firmware/keyboard.toml`. Any key can be changed live in the Vial app
 - a dimension can't be confirmed from a primary source
 - a change would move a key or alter the layout
 - anything would change the RP2040, USB or power circuit
-- renaming the USB product

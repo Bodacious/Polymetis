@@ -1,8 +1,8 @@
 ** Drc report for boethia60.kicad_pcb **
-** Created on 2026-10-15T03:24:04+0000 **
+** Created on 2026-10-15T22:00:39+0000 **
 ** Report includes: Errors, Warnings, Exclusions **
 
-** Found 92 DRC violations **
+** Found 88 DRC violations **
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
     Local override; error
     @(21.8920 mm, 2.0500 mm): Pad 1 [GND] of USB1 on F.Cu
@@ -259,20 +259,12 @@
     @(18.6670 mm, 4.0550 mm): Reference field of USB1
 [silk_overlap]: Silkscreen overlap
     Rule: board setup constraints silk; warning
-    @(280.1938 mm, 84.9313 mm): PCB text 'rev1' on F.Silkscreen
-    @(261.1438 mm, 84.9313 mm): PCB text 'boethia60' on F.Silkscreen
+    @(20.3190 mm, 4.2894 mm): Segment of R6 on F.Silkscreen
+    @(18.6670 mm, 4.0550 mm): Reference field of USB1
 [silk_overlap]: Silkscreen overlap
     Rule: board setup constraints silk; warning
-    @(262.9940 mm, 83.3438 mm): Reference field of D_56
-    @(261.1438 mm, 84.9313 mm): PCB text 'boethia60' on F.Silkscreen
-[silk_overlap]: Silkscreen overlap
-    Rule: board setup constraints silk; warning
-    @(261.9940 mm, 81.7338 mm): Segment of D_56 on F.Silkscreen
-    @(261.1438 mm, 84.9313 mm): PCB text 'boethia60' on F.Silkscreen
-[silk_overlap]: Silkscreen overlap
-    Rule: board setup constraints silk; warning
-    @(261.9940 mm, 81.7338 mm): Segment of D_56 on F.Silkscreen
-    @(261.1438 mm, 84.9313 mm): PCB text 'boethia60' on F.Silkscreen
+    @(19.5590 mm, 4.2894 mm): Segment of R6 on F.Silkscreen
+    @(18.6670 mm, 4.0550 mm): Reference field of USB1
 [silk_overlap]: Silkscreen overlap
     Rule: board setup constraints silk; warning
     @(30.1500 mm, 85.1997 mm): Reference field of Y1
@@ -285,14 +277,6 @@
     Rule: board setup constraints silk; warning
     @(12.7464 mm, 77.4026 mm): Segment of C13 on F.Silkscreen
     @(12.9624 mm, 77.2948 mm): Reference field of C5
-[silk_overlap]: Silkscreen overlap
-    Rule: board setup constraints silk; warning
-    @(20.3190 mm, 4.2894 mm): Segment of R6 on F.Silkscreen
-    @(18.6670 mm, 4.0550 mm): Reference field of USB1
-[silk_overlap]: Silkscreen overlap
-    Rule: board setup constraints silk; warning
-    @(19.5590 mm, 4.2894 mm): Segment of R6 on F.Silkscreen
-    @(18.6670 mm, 4.0550 mm): Reference field of USB1
 
 ** Found 0 unconnected pads **
 
