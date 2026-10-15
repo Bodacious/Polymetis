@@ -106,11 +106,11 @@ dd { margin: 0; font-variant-numeric: tabular-nums; }
     <section>
       <h2>Height stack</h2>
       <div class="section-svg">
-        <svg viewBox="0 0 560 220" role="img" aria-label="Cross-section of one key, drawn to scale, with layer thicknesses">
-          <!-- 10 px per mm; y = 200 is the underside of the bottom plate -->
+        <svg viewBox="0 0 560 215" role="img" aria-label="Cross-section of one key, drawn to scale, with layer thicknesses">
+          <!-- 10 px per mm; y = 203 is the underside of the bottom plate -->
           <g font-family="var(--font-mono)" font-size="11">
-            <rect x="20" y="184" width="340" height="16" style="fill: var(--body-grey)"/>
-            <rect x="20" y="134" width="340" height="50" style="fill: var(--body-grey); opacity: .55"/>
+            <rect x="20" y="187" width="340" height="16" style="fill: var(--body-grey)"/>
+            <rect x="20" y="134" width="340" height="53" style="fill: var(--body-grey); opacity: .55"/>
             <rect x="20" y="122" width="100" height="12" style="fill: var(--body-grey)"/>
             <rect x="260" y="122" width="100" height="12" style="fill: var(--body-grey)"/>
             <rect x="20" y="147" width="340" height="16" style="fill: #2f6b4a"/>
@@ -121,8 +121,8 @@ dd { margin: 0; font-variant-numeric: tabular-nums; }
             <rect x="172" y="70" width="36" height="18" style="fill: #101113"/>
             <path d="M103 80 L277 80 L270 36 Q269 32 265 32 L115 32 Q111 32 110 36 Z" style="fill: var(--index)"/>
             <g style="fill: var(--fg)">
-              <text x="370" y="196">bottom plate 1.6</text>
-              <text x="370" y="177">frame ≈ 5.0</text>
+              <text x="370" y="199">bottom plate 1.6</text>
+              <text x="370" y="180">frame 5.3</text>
               <text x="370" y="158">PCB 1.6</text>
               <text x="370" y="145">gap 1.3</text>
               <text x="370" y="131">top plate 1.2</text>
@@ -133,13 +133,13 @@ dd { margin: 0; font-variant-numeric: tabular-nums; }
           </g>
         </svg>
       </div>
-      <p class="lede">Plate, gap, PCB and socket figures are from Gateron's drawings. The frame thickness is calculated (1.3 + 1.6 + 1.87 = 4.77 mm, plus clearance) and will be confirmed in the frame step.</p>
+      <p class="lede">Plate, gap, PCB and socket figures are from Gateron's drawings. The frame is 5.3 mm: the 1.3 mm gap, the 1.6 mm PCB and the tallest part underneath (the 2.16 mm flash chip), plus clearance.</p>
     </section>
     <section>
       <h2>Key figures</h2>
       <dl>
         <dt>Footprint</dt><dd>309.9 × 119.4 mm</dd>
-        <dt>Case height</dt><dd>≈ 7.8 mm <span class="est">est.</span></dd>
+        <dt>Case height</dt><dd>8.1 mm</dd>
         <dt>To cap tops</dt><dd>≈ 17 mm <span class="est">est.</span></dd>
         <dt>Keys</dt><dd>60, HHKB Pro 2, 6.25u space bar</dd>
         <dt>Switches</dt><dd>Gateron KS-33 on hot-swap sockets</dd>
@@ -173,7 +173,7 @@ dd { margin: 0; font-variant-numeric: tabular-nums; }
 
   const U = 19.05;
   const CASE_W = 309.94, CASE_D = 119.44, CASE_R = 5;
-  const BOTTOM_T = 1.6, FRAME_T = 5.0, TOP_T = 1.2;
+  const BOTTOM_T = 1.6, FRAME_T = 5.3, TOP_T = 1.2;
   const PLATE_Y = BOTTOM_T + FRAME_T + TOP_T;      // top surface of the top plate
   const SWITCH_UP = 3.6, CAP_GAP = 0.6, CAP_H = 4.6;
 

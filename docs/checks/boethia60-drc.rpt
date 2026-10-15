@@ -1,0 +1,301 @@
+** Drc report for boethia60.kicad_pcb **
+** Created on 2026-10-15T03:24:04+0000 **
+** Report includes: Errors, Warnings, Exclusions **
+
+** Found 92 DRC violations **
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(21.8920 mm, 2.0500 mm): Pad 1 [GND] of USB1 on F.Cu
+    @(21.1170 mm, 2.0500 mm): Pad 2 [VBUS] of USB1 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(16.2170 mm, 2.0500 mm): Pad 11 [VBUS] of USB1 on F.Cu
+    @(15.4420 mm, 2.0500 mm): Pad 12 [GND] of USB1 on F.Cu
+[starved_thermal]: Thermal relief connection to zone incomplete (layer F.Cu; 1 spokes connected to isolated island)
+    Local override; error
+    @(12.9540 mm, -5.3340 mm): Zone [Earth] on F.Cu and B.Cu, priority 3
+    @(14.3470 mm, 0.6350 mm): PTH pad 13 [Earth] of USB1
+[starved_thermal]: Thermal relief connection to zone incomplete (layer F.Cu; zone min spoke count 2; actual 1)
+    Local override; error
+    @(290.4490 mm, -7.8740 mm): Zone [GND] on F.Cu and B.Cu, priority 2
+    @(42.5450 mm, 83.0580 mm): PTH pad 6 [GND] of J1
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(57.0230 mm, 78.1250 mm): Via [col11] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(18.1610 mm, 16.2560 mm): Via [Net-(D_15-A)] on F.Cu - B.Cu
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; warning
+    @(286.5437 mm, 89.6937 mm): Segment on Edge.Cuts
+    @(286.8060 mm, 7.1440 mm): Reference field of D_1
+[lib_footprint_mismatch]: Footprint 'QFN-56-1EP_7x7mm_P0.4mm_EP3.2x3.2mm' does not match copy in library 'Package_DFN_QFN'.
+    Local override; warning
+    @(19.8438 mm, 82.5500 mm): Footprint U3
+[lib_footprint_mismatch]: Footprint 'C_0402_1005Metric' does not match copy in library 'Capacitor_SMD'.
+    Local override; warning
+    @(30.8356 mm, 80.2640 mm): Footprint C15
+[lib_footprint_mismatch]: Footprint 'C_0402_1005Metric' does not match copy in library 'Capacitor_SMD'.
+    Local override; warning
+    @(4.2825 mm, 25.4000 mm): Footprint C2
+[lib_footprint_mismatch]: Footprint 'Fuse_0805_2012Metric' does not match copy in library 'Fuse'.
+    Local override; warning
+    @(9.7005 mm, 4.0640 mm): Footprint F1
+[lib_footprint_mismatch]: Footprint 'C_0402_1005Metric' does not match copy in library 'Capacitor_SMD'.
+    Local override; warning
+    @(29.8730 mm, 84.5820 mm): Footprint C4
+[lib_footprint_mismatch]: Footprint 'C_0402_1005Metric' does not match copy in library 'Capacitor_SMD'.
+    Local override; warning
+    @(9.0144 mm, 82.4992 mm): Footprint C14
+[lib_footprint_issues]: Footprint 'SOIC-8_5.23x5.23mm_P1.27mm' not found in library 'Package_SO'.
+    Local override; warning
+    @(8.8900 mm, 88.9000 mm): Footprint U4
+[lib_footprint_mismatch]: Footprint 'R_0402_1005Metric' does not match copy in library 'Resistor_SMD'.
+    Local override; warning
+    @(13.0790 mm, 80.5180 mm): Footprint R3
+[lib_footprint_mismatch]: Footprint 'C_0402_1005Metric' does not match copy in library 'Capacitor_SMD'.
+    Local override; warning
+    @(9.0196 mm, 81.4832 mm): Footprint C7
+[lib_footprint_mismatch]: Footprint 'R_0402_1005Metric' does not match copy in library 'Resistor_SMD'.
+    Local override; warning
+    @(29.8430 mm, 83.5660 mm): Footprint R2
+[lib_footprint_mismatch]: Footprint 'C_0402_1005Metric' does not match copy in library 'Capacitor_SMD'.
+    Local override; warning
+    @(14.1224 mm, 77.2948 mm): Footprint C5
+[lib_footprint_mismatch]: Footprint 'C_0402_1005Metric' does not match copy in library 'Capacitor_SMD'.
+    Local override; warning
+    @(8.9916 mm, 80.5180 mm): Footprint C8
+[lib_footprint_mismatch]: Footprint 'C_0402_1005Metric' does not match copy in library 'Capacitor_SMD'.
+    Local override; warning
+    @(20.8280 mm, 75.9232 mm): Footprint C9
+[lib_footprint_mismatch]: Footprint 'R_0402_1005Metric' does not match copy in library 'Resistor_SMD'.
+    Local override; warning
+    @(51.3060 mm, 73.7870 mm): Footprint R7
+[lib_footprint_mismatch]: Footprint 'R_0402_1005Metric' does not match copy in library 'Resistor_SMD'.
+    Local override; warning
+    @(27.1780 mm, 79.8850 mm): Footprint R1
+[lib_footprint_mismatch]: Footprint 'C_0402_1005Metric' does not match copy in library 'Capacitor_SMD'.
+    Local override; warning
+    @(15.1892 mm, 77.2948 mm): Footprint C6
+[lib_footprint_mismatch]: Footprint 'SOT-23-3' does not match copy in library 'Package_TO_SOT_SMD'.
+    Local override; warning
+    @(4.9188 mm, 28.2312 mm): Footprint U1
+[lib_footprint_mismatch]: Footprint 'C_0402_1005Metric' does not match copy in library 'Capacitor_SMD'.
+    Local override; warning
+    @(4.7625 mm, 30.9563 mm): Footprint C3
+[lib_footprint_mismatch]: Footprint 'R_0402_1005Metric' does not match copy in library 'Resistor_SMD'.
+    Local override; warning
+    @(13.0790 mm, 81.5340 mm): Footprint R4
+[lib_footprint_mismatch]: Footprint 'C_0402_1005Metric' does not match copy in library 'Capacitor_SMD'.
+    Local override; warning
+    @(30.7848 mm, 81.2292 mm): Footprint C16
+[lib_footprint_mismatch]: Footprint 'C_0402_1005Metric' does not match copy in library 'Capacitor_SMD'.
+    Local override; warning
+    @(21.7450 mm, 88.7984 mm): Footprint C12
+[lib_footprint_mismatch]: Footprint 'C_0402_1005Metric' does not match copy in library 'Capacitor_SMD'.
+    Local override; warning
+    @(30.4240 mm, 86.4590 mm): Footprint C1
+[lib_footprint_mismatch]: Footprint 'R_0402_1005Metric' does not match copy in library 'Resistor_SMD'.
+    Local override; warning
+    @(19.9390 mm, 4.4430 mm): Footprint R6
+[lib_footprint_mismatch]: Footprint 'Crystal_SMD_3225-4Pin_3.2x2.5mm' does not match copy in library 'Crystal'.
+    Local override; warning
+    @(32.6000 mm, 85.1997 mm): Footprint Y1
+[lib_footprint_mismatch]: Footprint 'C_0402_1005Metric' does not match copy in library 'Capacitor_SMD'.
+    Local override; warning
+    @(13.1064 mm, 77.2948 mm): Footprint C13
+[lib_footprint_mismatch]: Footprint 'C_0402_1005Metric' does not match copy in library 'Capacitor_SMD'.
+    Local override; warning
+    @(16.1036 mm, 87.2236 mm): Footprint C10
+[lib_footprint_mismatch]: Footprint 'L_0603_1608Metric' does not match copy in library 'Inductor_SMD'.
+    Local override; warning
+    @(25.4000 mm, 3.6575 mm): Footprint FB1
+[lib_footprint_mismatch]: Footprint 'C_0402_1005Metric' does not match copy in library 'Capacitor_SMD'.
+    Local override; warning
+    @(16.9672 mm, 77.1652 mm): Footprint C11
+[lib_footprint_mismatch]: Footprint 'R_0402_1005Metric' does not match copy in library 'Resistor_SMD'.
+    Local override; warning
+    @(16.3810 mm, 5.4610 mm): Footprint R5
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(220.1312 mm, 26.1938 mm): Reference field of D_19
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(39.1562 mm, 7.1437 mm): Reference field of D_14
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(58.2062 mm, 7.1437 mm): Reference field of D_13
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(134.4062 mm, 7.1437 mm): Reference field of D_9
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(186.7937 mm, 64.2938 mm): Reference field of D_47
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(4.2825 mm, 26.5600 mm): Reference field of C2
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(143.9313 mm, 26.1938 mm): Reference field of D_23
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(215.3688 mm, 45.2437 mm): Reference field of D_33
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(148.6937 mm, 64.2938 mm): Reference field of D_49
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(158.2188 mm, 45.2437 mm): Reference field of D_36
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(120.1188 mm, 45.2437 mm): Reference field of D_38
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(105.8312 mm, 26.1938 mm): Reference field of D_25
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(82.0187 mm, 45.2437 mm): Reference field of D_40
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(267.7563 mm, 7.1437 mm): Reference field of D_2
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(86.7812 mm, 26.1938 mm): Reference field of D_26
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(72.4938 mm, 64.2938 mm): Reference field of D_53
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(177.2688 mm, 44.9875 mm): Reference field of D_35
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(239.1813 mm, 26.1938 mm): Reference field of D_18
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(201.0813 mm, 26.1938 mm): Reference field of D_20
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(12.9624 mm, 77.2948 mm): Reference field of C5
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(48.6812 mm, 26.1938 mm): Reference field of D_28
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(96.3063 mm, 7.1437 mm): Reference field of D_11
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(124.8812 mm, 26.1938 mm): Reference field of D_24
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(62.9688 mm, 45.2437 mm): Reference field of D_41
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(115.3563 mm, 7.1437 mm): Reference field of D_10
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(234.4187 mm, 45.2437 mm): Reference field of D_32
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(210.6062 mm, 7.1437 mm): Reference field of D_5
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(153.4563 mm, 7.1437 mm): Reference field of D_8
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(224.8938 mm, 64.2938 mm): Reference field of D_45
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(229.6562 mm, 7.1437 mm): Reference field of D_4
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(129.6438 mm, 64.2938 mm): Reference field of D_50
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(162.9812 mm, 26.1938 mm): Reference field of D_22
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(77.2562 mm, 7.1437 mm): Reference field of D_12
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(110.5938 mm, 64.2938 mm): Reference field of D_51
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(248.7063 mm, 7.1437 mm): Reference field of D_3
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(172.5062 mm, 7.1437 mm): Reference field of D_7
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(191.5563 mm, 6.8875 mm): Reference field of D_6
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(139.1687 mm, 45.2437 mm): Reference field of D_37
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(30.1500 mm, 85.1997 mm): Reference field of Y1
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(182.0312 mm, 26.1938 mm): Reference field of D_21
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(205.8438 mm, 64.2938 mm): Reference field of D_46
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(67.7313 mm, 26.1938 mm): Reference field of D_27
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(167.7438 mm, 64.2938 mm): Reference field of D_48
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(196.3187 mm, 45.2437 mm): Reference field of D_34
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(91.5438 mm, 64.2938 mm): Reference field of D_52
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(101.0687 mm, 45.2437 mm): Reference field of D_39
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(18.6670 mm, 4.0550 mm): Reference field of USB1
+[silk_overlap]: Silkscreen overlap
+    Rule: board setup constraints silk; warning
+    @(280.1938 mm, 84.9313 mm): PCB text 'rev1' on F.Silkscreen
+    @(261.1438 mm, 84.9313 mm): PCB text 'boethia60' on F.Silkscreen
+[silk_overlap]: Silkscreen overlap
+    Rule: board setup constraints silk; warning
+    @(262.9940 mm, 83.3438 mm): Reference field of D_56
+    @(261.1438 mm, 84.9313 mm): PCB text 'boethia60' on F.Silkscreen
+[silk_overlap]: Silkscreen overlap
+    Rule: board setup constraints silk; warning
+    @(261.9940 mm, 81.7338 mm): Segment of D_56 on F.Silkscreen
+    @(261.1438 mm, 84.9313 mm): PCB text 'boethia60' on F.Silkscreen
+[silk_overlap]: Silkscreen overlap
+    Rule: board setup constraints silk; warning
+    @(261.9940 mm, 81.7338 mm): Segment of D_56 on F.Silkscreen
+    @(261.1438 mm, 84.9313 mm): PCB text 'boethia60' on F.Silkscreen
+[silk_overlap]: Silkscreen overlap
+    Rule: board setup constraints silk; warning
+    @(30.1500 mm, 85.1997 mm): Reference field of Y1
+    @(29.7652 mm, 84.9420 mm): Segment of C4 on F.Silkscreen
+[silk_overlap]: Silkscreen overlap
+    Rule: board setup constraints silk; warning
+    @(11.9464 mm, 77.2948 mm): Reference field of C13
+    @(12.9624 mm, 77.2948 mm): Reference field of C5
+[silk_overlap]: Silkscreen overlap
+    Rule: board setup constraints silk; warning
+    @(12.7464 mm, 77.4026 mm): Segment of C13 on F.Silkscreen
+    @(12.9624 mm, 77.2948 mm): Reference field of C5
+[silk_overlap]: Silkscreen overlap
+    Rule: board setup constraints silk; warning
+    @(20.3190 mm, 4.2894 mm): Segment of R6 on F.Silkscreen
+    @(18.6670 mm, 4.0550 mm): Reference field of USB1
+[silk_overlap]: Silkscreen overlap
+    Rule: board setup constraints silk; warning
+    @(19.5590 mm, 4.2894 mm): Segment of R6 on F.Silkscreen
+    @(18.6670 mm, 4.0550 mm): Reference field of USB1
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** End of Report **
