@@ -28,10 +28,10 @@ keymap = [
         ["__", "__", "LAlt", "LGui", "__", "__", "Space", "__", "__", "__", "RGui", "__", "RAlt", "__", "__"], 
     ], 
     [
-        ["__", "F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9", "F10", "F11", "F12", "Insert", "Delete"], 
-        ["Bootloader", "__", "__", "__", "__", "__", "__", "__", "__", "MediaPrevTrack", "MediaNextTrack", "MediaPlayPause", "UP", "__", "Delete"], 
-        ["__", "__", "AudioVolDown", "AudioVolUp", "AudioMute", "MediaEject", "__", "__", "__", "Home", "PageUp", "Left", "Right", "__", "__"], 
-        ["__", "__", "__", "__", "__", "__", "__", "__", "__", "End", "PageDown", "Down", "__", "__", "__"], 
+        ["SystemPower", "F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9", "F10", "F11", "F12", "Insert", "Delete"], 
+        ["CapsLock", "__", "__", "__", "__", "__", "__", "__", "__", "PrintScreen", "ScrollLock", "Pause", "UP", "__", "Backspace"], 
+        ["__", "__", "AudioVolDown", "AudioVolUp", "AudioMute", "MediaEject", "__", "KpAsterisk", "KpSlash", "Home", "PageUp", "Left", "Right", "KpEnter", "__"], 
+        ["__", "__", "MediaPrevTrack", "MediaPlayPause", "MediaNextTrack", "__", "Bootloader", "KpPlus", "KpMinus", "End", "PageDown", "Down", "__", "__", "__"], 
         ["__", "__", "__", "__", "__", "__", "__", "__", "__", "__", "__", "__", "__", "__", "__"], 
     ], 
 ]

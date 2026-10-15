@@ -5,7 +5,7 @@ Gavin Morrice's keyboard: a fork of arviceblot/boethia60 turned into a 60-key HH
 Aims:
 - Low action: short key travel, keys that are easy to glide over. Short travel matters more than a light press.
 - HHKB Professional 2 layout, exactly.
-- Function keys on a Fn layer (e.g. Fn+P play/pause), remappable in Vial.
+- Every HHKB Professional 2 Fn combination replicated, plus media keys, remappable in Vial.
 
 Read `HANDOVER.md` before doing anything. It holds the decisions already made, the Fn layer, the current status, the next steps and the points where you must stop and ask Gavin.
 

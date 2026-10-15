@@ -6,7 +6,7 @@ The current state of the project, for Gavin and for any Claude session picking i
 
 1. **Low action.** Short key travel, so fingers move nimbly across the board. Short travel matters more than a light press. The keys should feel flat and even to glide over, not like cobblestones.
 2. **HHKB Professional 2 layout**, exactly, with a one-piece space bar.
-3. **Function keys on a Fn layer**, such as Fn+P for play/pause, remappable later without rebuilding the firmware.
+3. **The HHKB Fn layer, replicated**, plus media keys, remappable later without rebuilding the firmware.
 
 ## Decisions
 
@@ -30,20 +30,28 @@ Don't reopen these without asking Gavin.
 
 ## Fn layer
 
-Hold Fn (right of right Shift) and press:
+Hold Fn (right of right Shift) and press the key. This replicates the HHKB Professional 2 Fn layer (as in QMK's HHKB keymap), plus track controls and a bootloader key on keys the HHKB leaves unused.
 
 | Keys | Function |
 |---|---|
+| Esc | Power |
 | `1` … `=` | F1 … F12 |
-| `\` | Insert |
-| `` ` `` | Delete |
-| Backspace | Delete |
-| `I` `O` `P` | Previous track, next track, play/pause |
-| `A` `S` `D` `F` | Volume down, volume up, mute, eject |
+| `\` / `` ` `` | Insert / Delete |
+| Tab | Caps Lock |
+| `I` `O` `P` | Print Screen, Scroll Lock, Pause |
 | `[` | Up |
-| `;` `'` `/` | Left, right, down |
-| `K` `L` `,` `.` | Home, Page Up, End, Page Down |
-| Tab | Bootloader (for flashing new firmware) |
+| Backspace | Backspace |
+| `A` `S` `D` | Volume down, volume up, mute |
+| `F` | Eject (the HHKB's Mac-mode key) |
+| `H` `J` | Keypad `*`, keypad `/` |
+| `K` `L` | Home, Page Up |
+| `;` `'` | Left, right |
+| Enter | Keypad Enter |
+| `N` `M` | Keypad `+`, keypad `-` |
+| `,` `.` | End, Page Down |
+| `/` | Down |
+| `Z` `X` `C` | Previous track, play/pause, next track (not on the HHKB) |
+| `B` | Bootloader, for flashing (not on the HHKB) |
 
 Defined in `firmware/keyboard.toml`. Any key can be changed live in the Vial app.
 

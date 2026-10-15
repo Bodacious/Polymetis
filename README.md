@@ -20,7 +20,7 @@ The layout is drawn to scale, with keys coloured by finger, in [`docs/layout.htm
 | Top plate | 1.6 mm FR4 | 1.2 mm FR4, 14.00 mm switch cut-outs |
 | Bottom plate | 1.6 mm FR4 | 1.6 mm FR4 with a notch for the USB-C receptacle |
 | Frame | 4.0 mm | 5.3 mm, cavity sized to the PCB |
-| Firmware layers | 3 | 2 (base and Fn layer with F1–F12, media and arrows) |
+| Firmware layers | 3 | 2 (base and the HHKB Fn layer, plus track controls) |
 
 The HHKB Professional 2 bottom row has a 6u space bar and a 1.5u gap on the left. Polymetis uses a 6.25u space bar, which low-profile keycap sets include, and takes the extra 0.25u from the left gap. The right-hand bottom keys stay where they were, clear of the RP2040, reset pad and boot button. The space bar is centred 6.875u from the left edge, which is where the boundary between the two index fingers falls when averaged over the three letter rows.
 
@@ -76,18 +76,28 @@ The space bar row is only 7.9 mm from the PCB's front edge, so the stabiliser is
 
 ## Firmware
 
-RMK 0.5 with Vial, in `firmware/`. Layer 0 is the HHKB Professional 2 base layer. Layer 1 is the Fn layer: hold Fn (right of right Shift) and press
+RMK 0.5 with Vial, in `firmware/`. Layer 0 is the HHKB Professional 2 base layer. Layer 1 replicates the HHKB Professional 2 Fn layer, plus track controls and a bootloader key on keys the HHKB leaves unused. Hold Fn (right of right Shift) and press
 
 | Keys | Function |
 |---|---|
+| Esc | Power |
 | `1` … `=` | F1 … F12 |
 | `\` / `` ` `` | Insert / Delete |
-| Backspace | Delete |
-| `I` `O` `P` | Previous track, next track, play/pause |
-| `A` `S` `D` `F` | Volume down, volume up, mute, eject |
-| `[` and `;` `'` `/` | Arrows: up, and left, right, down |
-| `K` `L` `,` `.` | Home, Page Up, End, Page Down |
-| Tab | Bootloader |
+| Tab | Caps Lock |
+| `I` `O` `P` | Print Screen, Scroll Lock, Pause |
+| `[` | Up |
+| Backspace | Backspace |
+| `A` `S` `D` | Volume down, volume up, mute |
+| `F` | Eject (the HHKB's Mac-mode key) |
+| `H` `J` | Keypad `*`, keypad `/` |
+| `K` `L` | Home, Page Up |
+| `;` `'` | Left, right |
+| Enter | Keypad Enter |
+| `N` `M` | Keypad `+`, keypad `-` |
+| `,` `.` | End, Page Down |
+| `/` | Down |
+| `Z` `X` `C` | Previous track, play/pause, next track (not on the HHKB) |
+| `B` | Bootloader, for flashing (not on the HHKB) |
 
 Any key can be remapped live from the Vial app (or vial.rocks in Chrome), with no rebuild.
 
@@ -95,7 +105,7 @@ Any key can be remapped live from the Vial app (or vial.rocks in Chrome), with n
 
 1. Install Rust with [rustup](https://rustup.rs) (the repo pins the toolchain) and cargo-make: `cargo install cargo-make`.
 2. From `firmware/`, run `cargo make uf2`. It builds the firmware and writes `boethia60.uf2`.
-3. The first time, hold the board's boot button while plugging in USB. Later, press Fn + Tab instead. The keyboard appears as a USB drive called RPI-RP2.
+3. The first time, hold the board's boot button while plugging in USB. Later, press Fn + B instead. The keyboard appears as a USB drive called RPI-RP2.
 4. Copy `boethia60.uf2` onto that drive. The keyboard restarts with the new firmware.
 
 `firmware/README.md` covers flashing with a debug probe instead.
