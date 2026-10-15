@@ -2,27 +2,26 @@
 
 A 60-key, low-profile keyboard in the exact HHKB Professional 2 layout, with a one-piece 6.25u space bar, Gateron KS-33 low-profile switches on hot-swap sockets, an RP2040 on the board, and RMK firmware with Vial.
 
-Polymetis is a fork of [arviceblot/boethia60](https://github.com/arviceblot/boethia60). The RP2040 circuit, USB-C position, board outline, mounting holes and parts list are the boethia60's; the switches, layout, plates and frame have changed.
+![Polymetis layout: keys coloured by finger, modifiers dark grey](images/layout.png)
 
-![Polymetis layout, keys coloured by finger](images/layout.png)
+The layout is drawn to scale in [`docs/layout.html`](docs/layout.html): keys are coloured by the finger that presses them, and the modifiers are dark grey to match the body. A rotatable concept model is in [`docs/concept.html`](docs/concept.html).
 
-The layout is drawn to scale, with keys coloured by finger, in [`docs/layout.html`](docs/layout.html). A rotatable concept model is in [`docs/concept.html`](docs/concept.html).
+## At a glance
 
-## What changed from the boethia60
+| | |
+|---|---|
+| Keys | 60, HHKB Professional 2 |
+| Bottom row | 1.25u gap, Alt, Cmd 1.5u, Space 6.25u, Cmd 1.5u, Alt, 2.5u gap |
+| Switches | Gateron KS-33 Low Profile 2.0, linear (Red) |
+| Sockets | Gateron KS-2P02B01-02 hot-swap |
+| Stabilisers | one Gateron low-profile plate-mounted 6.25U under the space bar |
+| Controller | RP2040 on the board, USB-C |
+| Top plate | 1.2 mm FR4, 14.00 mm switch cut-outs |
+| Bottom plate | 1.6 mm FR4 with a notch for the USB-C receptacle |
+| Frame | 5.3 mm, printed |
+| Firmware | RMK with Vial; base layer and the HHKB Fn layer, plus track controls |
 
-| | boethia60 | Polymetis |
-|---|---|---|
-| Keys | 62, HHKB-like with a split space bar | 60, HHKB Professional 2 |
-| Bottom row | LGui, LAlt, Space 2.25u, MO(2), Space 2.75u, RAlt, RCtrl | 1.25u gap, Alt, Cmd 1.5u, Space 6.25u, Cmd 1.5u, Alt, 2.5u gap |
-| Switches | Kailh Choc V1/V2 | Gateron KS-33 (Low Profile 2.0) |
-| Sockets | Kailh Choc hot-swap | Gateron KS-2P02B01-02 hot-swap |
-| Stabilisers | none fitted | one Gateron low-profile plate-mounted 6.25U under the space bar |
-| Top plate | 1.6 mm FR4 | 1.2 mm FR4, 14.00 mm switch cut-outs |
-| Bottom plate | 1.6 mm FR4 | 1.6 mm FR4 with a notch for the USB-C receptacle |
-| Frame | 4.0 mm | 5.3 mm, cavity sized to the PCB |
-| Firmware layers | 3 | 2 (base and the HHKB Fn layer, plus track controls) |
-
-The HHKB Professional 2 bottom row has a 6u space bar and a 1.5u gap on the left. Polymetis uses a 6.25u space bar, which low-profile keycap sets include, and takes the extra 0.25u from the left gap. The right-hand bottom keys stay where they were, clear of the RP2040, reset pad and boot button. The space bar is centred 6.875u from the left edge, which is where the boundary between the two index fingers falls when averaged over the three letter rows.
+The HHKB Professional 2 bottom row has a 6u space bar and a 1.5u gap on the left. Polymetis uses a 6.25u space bar, which low-profile keycap sets include, and takes the extra 0.25u from the left gap. The right-hand bottom keys sit clear of the RP2040, reset pad and boot button. The space bar is centred 6.875u from the left edge, which is where the boundary between the two index fingers falls when averaged over the three letter rows.
 
 ## Parts
 
@@ -58,7 +57,7 @@ All figures in millimetres, from Gateron's drawings unless marked.
 
 The hot-swap sockets are 1.87 below the PCB (KS-2P02B01-02 drawing, ± 0.05) and the reset button 1.5 (XKB TS-1187A); the flash chip is the tallest at 1.95 nominal, 2.16 maximum. The exception is the USB-C receptacle (HRO TYPE-C-31-M-12), which stands 3.26 above the PCB surface it is mounted on. It sits in the frame's USB opening, and the bottom plate has a matching 16 × 13.7 mm notch below it. The stabiliser housing reaches 0.35 below the PCB through its slots.
 
-The original boethia60 frame was 4.0 mm with a 1.6 mm plate and Choc switches (plate top to PCB top 2.2), leaving about 1.4–1.8 mm under the PCB for the Choc sockets. Its cavity matched the key area (285.75 × 95.25), which is 1.6 mm narrower than the PCB; the Polymetis frame cuts the cavity from the PCB outline plus 0.3 mm.
+The frame cavity is cut from the PCB outline plus 0.3 mm.
 
 ## The space bar stabiliser
 
@@ -66,12 +65,12 @@ The Gateron 6.25U stabiliser housings reach 3.25 mm below the top plate, more th
 
 The space bar row is only 7.9 mm from the PCB's front edge, so the stabiliser is turned with its notch and wire hooks towards the back of the keyboard; the plate cut-out and the PCB slots both face that way.
 
-**Test-fit before ordering the main PCB.** Order the top plate first (it is cheap), fit the stabiliser and a KS-33 switch, and check that the housings and wire sit within the PCB slot outline in `boethia60/local.pretty/STAB_Gateron_LP_6.25U_PCB.kicad_mod`. Enter and left Shift have no stabilisers by design.
+**Test-fit before ordering the main PCB.** Order the top plate first (it is cheap), fit the stabiliser and a KS-33 switch, and check that the housings and wire sit within the PCB slot outline in `pcb/local.pretty/STAB_Gateron_LP_6.25U_PCB.kicad_mod`. Enter and left Shift have no stabilisers by design.
 
 ## Assembly notes
 
 - Fit the stabiliser in the top plate with its notch towards the back of the keyboard.
-- The bottom plate's logo faces outwards (down). The USB notch then lines up with the frame's USB opening at the back right.
+- The bottom plate's "Polymetis" text faces outwards (down). The USB notch then lines up with the frame's USB opening at the back right.
 - Sockets go on the underside of the PCB, the same side as the RP2040 and diodes. Switches go in from the top through the plate.
 
 ## Firmware
@@ -104,9 +103,9 @@ Any key can be remapped live from the Vial app (or vial.rocks in Chrome), with n
 ### Building and flashing
 
 1. Install Rust with [rustup](https://rustup.rs) (the repo pins the toolchain) and cargo-make: `cargo install cargo-make`.
-2. From `firmware/`, run `cargo make uf2`. It builds the firmware and writes `boethia60.uf2`.
+2. From `firmware/`, run `cargo make uf2`. It builds the firmware and writes `polymetis.uf2`.
 3. The first time, hold the board's boot button while plugging in USB. Later, press Fn + B instead. The keyboard appears as a USB drive called RPI-RP2.
-4. Copy `boethia60.uf2` onto that drive. The keyboard restarts with the new firmware.
+4. Copy `polymetis.uf2` onto that drive. The keyboard restarts with the new firmware.
 
 `firmware/README.md` covers flashing with a debug probe instead.
 
@@ -114,19 +113,22 @@ Any key can be remapped live from the Vial app (or vial.rocks in Chrome), with n
 
 | Path | Contents |
 |---|---|
-| `boethia60/` | Main PCB, KiCad 9 |
-| `boethia60/marbastlib-xp-gateron_lp.pretty` | KS-33 footprints from marbastlib |
+| `pcb/` | Main PCB, KiCad 9 (`polymetis.kicad_pro`) |
+| `pcb/marbastlib-xp-gateron_lp.pretty` | KS-33 footprints from marbastlib |
 | `jlcpcb/` | Main PCB Gerbers, drill files, BOM and placement files for JLCPCB |
 | `top-plate/`, `bottom-plate/` | Plate projects and factory files |
-| `case/` | Frame: `make_frame.py` and `polymetis-frame.stl`; the original FreeCAD frame and plate-generator outlines |
+| `case/` | Frame: `make_frame.py` and `polymetis-frame.stl`, built from `frame-source.stl` |
 | `firmware/` | RMK firmware, `keyboard.toml` and `vial.json` |
-| `boethia60.json` | Keyboard Layout Editor description |
+| `polymetis.json` | Keyboard Layout Editor description |
 | `docs/` | Layout and concept pages, datasheets, ERC/DRC reports and renders |
 
 ## Credits
 
-- [arviceblot/boethia60](https://github.com/arviceblot/boethia60), the design Polymetis is built from (MIT).
-- [ebastler/marbastlib](https://github.com/ebastler/marbastlib) for the KS-33 hot-swap footprints and socket 3D model (CERN-OHL-P-2.0, licence in `boethia60/marbastlib-xp-gateron_lp.pretty/LICENSE`).
+- [ebastler/marbastlib](https://github.com/ebastler/marbastlib) for the KS-33 hot-swap footprints and socket 3D model (CERN-OHL-P-2.0, licence in `pcb/marbastlib-xp-gateron_lp.pretty/LICENSE`).
 - [Keebio](https://github.com/keebio/Keebio-Parts.pretty) for the Gateron low-profile stabiliser PCB slot size (MIT).
 - [RMK](https://github.com/haobogu/rmk) firmware.
 - Gateron for the switch, socket and stabiliser drawings.
+
+## Licence
+
+MIT; see [`LICENSE`](LICENSE).

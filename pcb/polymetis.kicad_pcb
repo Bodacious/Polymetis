@@ -93157,18 +93157,6 @@
 		(layer "Edge.Cuts")
 		(uuid "84130fdf-cf2f-4893-a902-ad8f84a9d660")
 	)
-	(gr_text "based on boethia60 by arviceblot"
-		(at 262.5 91.4 0)
-		(layer "F.SilkS")
-		(uuid "973e4ee5-db47-44c4-b95b-60e37c3e5172")
-		(effects
-			(font
-				(size 0.8 0.8)
-				(thickness 0.12)
-			)
-			(justify left bottom)
-		)
-	)
 	(gr_text "rev1"
 		(at 280.19375 84.93125 0)
 		(layer "F.SilkS")

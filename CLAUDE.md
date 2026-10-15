@@ -1,6 +1,6 @@
 # Polymetis
 
-Gavin Morrice's keyboard: a fork of arviceblot/boethia60 turned into a 60-key HHKB Professional 2 layout with a one-piece 6.25u spacebar on Gateron KS-33 low-profile switches.
+Gavin Morrice's keyboard: a 60-key HHKB Professional 2 layout with a one-piece 6.25u spacebar on Gateron KS-33 low-profile switches.
 
 Aims:
 - Low action: short key travel, keys that are easy to glide over. Short travel matters more than a light press.

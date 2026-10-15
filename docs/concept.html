@@ -86,7 +86,7 @@ dd { margin: 0; font-variant-numeric: tabular-nums; }
   <header>
     <div class="eyebrow">Polymetis · concept sketch</div>
     <h1>Polymetis concept</h1>
-    <p class="lede">A dark grey 60-key HHKB Professional 2 layout with blank low-profile caps coloured by finger. The case outline, key positions and stack come from the design files and Gateron's drawings; the case finish and keycap shape are illustrative.</p>
+    <p class="lede">A dark grey 60-key HHKB Professional 2 layout with blank low-profile caps coloured by finger, with modifiers in the body colour. The case outline, key positions and stack come from the design files and Gateron's drawings; the case finish and keycap shape are illustrative.</p>
   </header>
 
   <div class="viewbar" role="group" aria-label="Camera view">
@@ -152,6 +152,7 @@ dd { margin: 0; font-variant-numeric: tabular-nums; }
         <div><i style="background: var(--middle)"></i>Middle</div>
         <div><i style="background: var(--index)"></i>Index</div>
         <div><i style="background: var(--thumb)"></i>Thumb</div>
+        <div><i style="background: var(--body-grey)"></i>Modifiers (body colour)</div>
       </div>
     </section>
   </div>
@@ -261,13 +262,15 @@ dd { margin: 0; font-variant-numeric: tabular-nums; }
   const FINGER = { P: "--pinky", R: "--ring", M: "--middle", I: "--index", T: "--thumb" };
   const capMats = {};
   for (const k in FINGER) capMats[k] = new THREE.MeshStandardMaterial({ color: srgb(tok(FINGER[k])), roughness: 0.48, metalness: 0 });
+  // modifiers: the body colour
+  capMats.D = new THREE.MeshStandardMaterial({ color: grey, roughness: 0.48, metalness: 0 });
 
   const rows = [
     { x: 0, keys: [[1,"P"],[1,"P"],[1,"R"],[1,"M"],[1,"I"],[1,"I"],[1,"I"],[1,"I"],[1,"M"],[1,"R"],[1,"P"],[1,"P"],[1,"P"],[1,"P"],[1,"P"]] },
-    { x: 0, keys: [[1.5,"P"],[1,"P"],[1,"R"],[1,"M"],[1,"I"],[1,"I"],[1,"I"],[1,"I"],[1,"M"],[1,"R"],[1,"P"],[1,"P"],[1,"P"],[1.5,"P"]] },
-    { x: 0, keys: [[1.75,"P"],[1,"P"],[1,"R"],[1,"M"],[1,"I"],[1,"I"],[1,"I"],[1,"I"],[1,"M"],[1,"R"],[1,"P"],[1,"P"],[2.25,"P"]] },
-    { x: 0, keys: [[2.25,"P"],[1,"P"],[1,"R"],[1,"M"],[1,"I"],[1,"I"],[1,"I"],[1,"I"],[1,"M"],[1,"R"],[1,"P"],[1.75,"P"],[1,"P"]] },
-    { x: 1.25, keys: [[1,"T"],[1.5,"T"],[6.25,"T"],[1.5,"T"],[1,"T"]] }
+    { x: 0, keys: [[1.5,"D"],[1,"P"],[1,"R"],[1,"M"],[1,"I"],[1,"I"],[1,"I"],[1,"I"],[1,"M"],[1,"R"],[1,"P"],[1,"P"],[1,"P"],[1.5,"D"]] },
+    { x: 0, keys: [[1.75,"D"],[1,"P"],[1,"R"],[1,"M"],[1,"I"],[1,"I"],[1,"I"],[1,"I"],[1,"M"],[1,"R"],[1,"P"],[1,"P"],[2.25,"D"]] },
+    { x: 0, keys: [[2.25,"D"],[1,"P"],[1,"R"],[1,"M"],[1,"I"],[1,"I"],[1,"I"],[1,"I"],[1,"M"],[1,"R"],[1,"P"],[1.75,"D"],[1,"D"]] },
+    { x: 1.25, keys: [[1,"D"],[1.5,"D"],[6.25,"T"],[1.5,"D"],[1,"D"]] }
   ];
   const x0 = -15 * U / 2, z0 = -5 * U / 2;
   const capBase = PLATE_Y + SWITCH_UP + CAP_GAP;

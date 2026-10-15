@@ -1,19 +1,8 @@
 ** Drc report for bottom-plate.kicad_pcb **
-** Created on 2026-10-15T03:24:05+0000 **
+** Created on 2026-10-15T22:15:02+0000 **
 ** Report includes: Errors, Warnings, Exclusions **
 
-** Found 3 DRC violations **
-[lib_footprint_issues]: The current configuration does not include the footprint library 'local'.
-    Local override; warning
-    @(268.3510 mm, 78.8670 mm): Footprint G***
-[silk_overlap]: Silkscreen overlap
-    Rule: board setup constraints silk; warning
-    @(268.3510 mm, 78.8670 mm): Reference field of G***
-    @(264.5763 mm, 62.3548 mm): Polygon of G*** on F.Silkscreen
-[silk_overlap]: Silkscreen overlap
-    Rule: board setup constraints silk; warning
-    @(268.3510 mm, 78.8670 mm): Reference field of G***
-    @(264.3385 mm, 78.4729 mm): Polygon of G*** on F.Silkscreen
+** Found 0 DRC violations **
 
 ** Found 0 unconnected pads **
 

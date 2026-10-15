@@ -1,12 +1,12 @@
 %TF.GenerationSoftware,KiCad,Pcbnew,9.0.9*%
-%TF.CreationDate,2026-10-15T22:00:27+00:00*%
-%TF.ProjectId,boethia60,626f6574-6869-4613-9630-2e6b69636164,rev?*%
+%TF.CreationDate,2026-10-15T22:14:53+00:00*%
+%TF.ProjectId,polymetis,706f6c79-6d65-4746-9973-2e6b69636164,rev?*%
 %TF.SameCoordinates,Original*%
-%TF.FileFunction,Soldermask,Bot*%
-%TF.FilePolarity,Negative*%
+%TF.FileFunction,Legend,Bot*%
+%TF.FilePolarity,Positive*%
 %FSLAX46Y46*%
 G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
-G04 Created by KiCad (PCBNEW 9.0.9) date 2026-10-15 22:00:27*
+G04 Created by KiCad (PCBNEW 9.0.9) date 2026-10-15 22:14:53*
 %MOMM*%
 %LPD*%
 G01*
@@ -16,6 +16,7 @@ G04 APERTURE LIST*
 %ADD12O,1.000000X2.100000*%
 %ADD13O,1.000000X1.600000*%
 G04 APERTURE END LIST*
+%LPC*%
 D10*
 %TO.C,K_4*%
 X219075000Y-9525000D03*
@@ -211,4 +212,5 @@ X123825000Y-9525000D03*
 %TO.C,K_54*%
 X35718750Y-66675000D03*
 %TD*%
+%LPD*%
 M02*

@@ -19,7 +19,7 @@
   --middle: #5fc4b4;
   --index: #f2c063;
   --thumb: #7fa4e6;
-  --plain: #c5c9cf;
+  --plain: #3a3d43;
   --font-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
   --font-body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
@@ -85,11 +85,11 @@ p { margin: 0; max-width: 65ch; }
   <header>
     <div class="eyebrow">Polymetis · 60 keys · Gateron KS-33</div>
     <h1>Polymetis layout</h1>
-    <p class="lede">HHKB Professional 2 layout: Backspace sits one row lower (on the Tab row), \ and ` move up to the number row, Control takes the Caps Lock spot, and the bottom row has one 6.25u spacebar. Every key, modifiers included, is coloured by the finger that presses it: five colours in all.</p>
+    <p class="lede">HHKB Professional 2 layout: Backspace sits one row lower (on the Tab row), \ and ` move up to the number row, Control takes the Caps Lock spot, and the bottom row has one 6.25u spacebar. Letters, numbers, punctuation and the space bar are coloured by the finger that presses them; the modifiers (Tab, Backspace, Control, Enter, both Shifts, Fn, Alt and Cmd) are dark grey, the body colour: six colours in all.</p>
   </header>
 
   <div class="board">
-    <svg id="kb" viewBox="0 0 1000 400" role="img" aria-label="Keyboard layout drawn to scale, keys coloured by finger"></svg>
+    <svg id="kb" viewBox="0 0 1000 400" role="img" aria-label="Keyboard layout drawn to scale, keys coloured by finger, modifiers dark grey"></svg>
     <p class="note">Drawn to scale (1u = 19.05 mm). The solid line marks the centre of the space bar; the dotted line marks the centre of the case.</p>
   </div>
 
@@ -125,7 +125,7 @@ p { margin: 0; max-width: 65ch; }
     M: { name: "Middle finger", v: "--middle" },
     I: { name: "Index finger", v: "--index" },
     T: { name: "Thumb", v: "--thumb" },
-    N: { name: "Plain modifiers", v: "--plain" }
+    N: { name: "Modifiers (body colour)", v: "--plain" }
   };
   // [legend, width in u, finger, isModifier]
   const rows = [
@@ -171,11 +171,11 @@ p { margin: 0; max-width: 65ch; }
         g.appendChild(el("rect", { x: px, y: py, width: pw, height: ph, rx: 7, fill: `var(${FINGERS[fk].v})`, stroke: "rgba(0,0,0,.22)" }));
         g.appendChild(el("rect", { x: px + 5, y: py + 4, width: pw - 10, height: ph - 13, rx: 5, fill: "rgba(255,255,255,.22)" }));
         if (lab) {
-          const t = el("text", { x: px + 9, y: py + 21, fill: "var(--legend-ink)", "font-family": "var(--font-mono)", "font-size": lab.length > 1 ? 12 : 15 });
+          const t = el("text", { x: px + 9, y: py + 21, fill: fk === "N" ? "#e7e9ee" : "var(--legend-ink)", "font-family": "var(--font-mono)", "font-size": lab.length > 1 ? 12 : 15 });
           t.textContent = lab; g.appendChild(t);
         }
         if (w !== 1) {
-          const s = el("text", { x: px + pw - 8, y: py + ph - 10, fill: "rgba(27,29,34,.65)", "font-family": "var(--font-mono)", "font-size": 10, "text-anchor": "end" });
+          const s = el("text", { x: px + pw - 8, y: py + ph - 10, fill: fk === "N" ? "rgba(231,233,238,.7)" : "rgba(27,29,34,.65)", "font-family": "var(--font-mono)", "font-size": 10, "text-anchor": "end" });
           s.textContent = w + "u"; g.appendChild(s);
         }
         svg.appendChild(g);
@@ -198,6 +198,6 @@ p { margin: 0; max-width: 65ch; }
     });
   }
 
-  draw(false);
+  draw(true);
 })();
 </script>

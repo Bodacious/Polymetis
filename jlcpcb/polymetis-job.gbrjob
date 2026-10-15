@@ -5,12 +5,12 @@
       "Application": "Pcbnew",
       "Version": "9.0.9"
     },
-    "CreationDate": "2026-10-15T22:00:27+00:00"
+    "CreationDate": "2026-10-15T22:14:53+00:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
-      "Name": "boethia60",
-      "GUID": "626f6574-6869-4613-9630-2e6b69636164",
+      "Name": "polymetis",
+      "GUID": "706f6c79-6d65-4746-9973-2e6b69636164",
       "Revision": "rev?"
     },
     "Size": {
@@ -34,47 +34,47 @@
   ],
   "FilesAttributes": [
     {
-      "Path": "boethia60-F_Cu.gbr",
+      "Path": "polymetis-F_Cu.gbr",
       "FileFunction": "Copper,L1,Top",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "boethia60-B_Cu.gbr",
+      "Path": "polymetis-B_Cu.gbr",
       "FileFunction": "Copper,L2,Bot",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "boethia60-F_Paste.gbr",
+      "Path": "polymetis-F_Paste.gbr",
       "FileFunction": "SolderPaste,Top",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "boethia60-B_Paste.gbr",
+      "Path": "polymetis-B_Paste.gbr",
       "FileFunction": "SolderPaste,Bot",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "boethia60-F_Silkscreen.gbr",
+      "Path": "polymetis-F_Silkscreen.gbr",
       "FileFunction": "Legend,Top",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "boethia60-B_Silkscreen.gbr",
+      "Path": "polymetis-B_Silkscreen.gbr",
       "FileFunction": "Legend,Bot",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "boethia60-F_Mask.gbr",
+      "Path": "polymetis-F_Mask.gbr",
       "FileFunction": "SolderMask,Top",
       "FilePolarity": "Negative"
     },
     {
-      "Path": "boethia60-B_Mask.gbr",
+      "Path": "polymetis-B_Mask.gbr",
       "FileFunction": "SolderMask,Bot",
       "FilePolarity": "Negative"
     },
     {
-      "Path": "boethia60-Edge_Cuts.gbr",
+      "Path": "polymetis-Edge_Cuts.gbr",
       "FileFunction": "Profile",
       "FilePolarity": "Positive"
     }

@@ -1,5 +1,5 @@
 [package]
-name = "boethia60"
+name = "polymetis"
 version = "0.1.0"
 authors = ["Haobo Gu <haobogu@outlook.com>"]
 description = "Keyboard firmware written in Rust"
@@ -41,7 +41,7 @@ json = "0.12"
 const-gen = "1.6"
 
 [[bin]]
-name = "boethia60"
+name = "polymetis"
 test = false
 bench = false
 

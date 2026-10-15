@@ -1,7 +1,7 @@
 """Generate the Polymetis middle frame as an STL.
 
 The frame is a flat ring between the top and bottom plates. Its outer shell and the eight M2
-holes are taken from the original boethia60 frame (`boethia60 case.stl`); the inner cavity is
+holes are taken from the source frame (`frame-source.stl`); the inner cavity is
 rebuilt from the main PCB outline (the original cavity was 1.6 mm narrower than the PCB), and
 the thickness comes from the KS-33 stack:
 
@@ -36,7 +36,7 @@ USB_X = (116.0, 132.0)    # USB opening, unchanged from the original frame
 
 
 def original_shell_and_holes():
-    m = trimesh.load(HERE / "boethia60 case.stl")
+    m = trimesh.load(HERE / "frame-source.stl")
     top = [Polygon(t[:, :2]).buffer(0) for t in m.triangles if np.allclose(t[:, 2], m.bounds[1][2])]
     u = unary_union([p for p in top if p.area > 0])
     shell = u.convex_hull

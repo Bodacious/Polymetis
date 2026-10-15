@@ -1,6 +1,6 @@
 # Polymetis: decisions and status
 
-The current state of the project, for Gavin and for any Claude session picking it up. Read this before changing anything. The original brief from 12 October 2026, with its measurements of the unmodified boethia60, is in [`docs/history/handover-brief-2026-10-12.md`](docs/history/handover-brief-2026-10-12.md); where it disagrees with this page, this page wins.
+The current state of the project, for Gavin and for any Claude session picking it up. Read this before changing anything.
 
 ## Aims
 
@@ -24,10 +24,10 @@ Don't reopen these without asking Gavin.
 | Plates | Top 1.2 mm FR4 (Gateron's figure for both switch and stabiliser). Bottom 1.6 mm FR4 with a USB-C notch. |
 | Frame | 5.3 mm, one piece, printed by a professional service. |
 | Keycaps | As low as possible without hurting ease of build or quality; cross (MX) stems for KS-33. A flat, uniform profile suits the "not cobblestones" aim. Fit on KS-33 not yet confirmed. |
-| Keycap colours | Five colours, one per finger: thumb, index, middle, ring, little. Modifiers take the colour of the finger that presses them (Alt and Cmd thumb; Tab, Ctrl, Shift, Enter, Backspace, Fn little finger). [`docs/layout.html`](docs/layout.html) has the full colouring. |
+| Keycap colours | Six colours. Five by finger for letters, numbers, punctuation and the space bar: thumb (space bar), index, middle, ring, little. The sixth is dark grey, the body colour, for the 11 modifiers: Tab, Backspace, Ctrl, Enter, both Shifts, Fn, both Alts, both Cmds. [`docs/layout.html`](docs/layout.html) has the full colouring. |
 | Firmware | RMK 0.5 with Vial. Two layers: base and Fn. The old layer 2 is gone. The keyboard reports itself over USB as `Polymetis`. |
-| Electronics | RP2040, USB-C and power circuit unchanged from the boethia60, except F1: the original parts list fitted a ferrite bead (C1015) where the schematic has a 500 mA fuse, so F1 is now a real resettable fuse, SMD0805P050TF/12 (C90129: 500 mA hold, 1 A trip, 12 V), on the same 0805 footprint. |
-| Board text | "Polymetis" with "based on boethia60 by arviceblot" underneath, on the underside. |
+| Electronics | RP2040, USB-C and power circuit are fixed; change only with Gavin's agreement. F1 is a resettable fuse, SMD0805P050TF/12 (C90129: 500 mA hold, 1 A trip, 12 V), on an 0805 footprint. An earlier parts list had a ferrite bead (C1015) there by mistake. |
+| Board text | "Polymetis" on the main PCB's underside and on the bottom plate's outside face. |
 
 ## Fn layer
 
@@ -60,11 +60,11 @@ Defined in `firmware/keyboard.toml`. Any key can be changed live in the Vial app
 
 | Part | State |
 |---|---|
-| Main PCB | Routed. DRC: 0 unconnected pads, schematic parity clean; the only errors are two clearances inside the original USB-C footprint. Factory files in `jlcpcb/`. |
+| Main PCB | Routed. DRC: 0 unconnected pads, schematic parity clean; the only errors are two clearances inside the USB-C connector footprint. Factory files in `jlcpcb/`. |
 | Top plate | Done, DRC clean. Factory files in `top-plate/`. |
-| Bottom plate | Done. Assumes the logo faces outwards so the USB notch lines up with the frame opening. |
+| Bottom plate | Done. Assumes the "Polymetis" text faces outwards so the USB notch lines up with the frame opening. |
 | Frame | `case/polymetis-frame.stl`, watertight. |
-| Firmware | Builds; `cargo make uf2` makes `boethia60.uf2`. Not flashed. |
+| Firmware | Builds; `cargo make uf2` makes `polymetis.uf2`. Not flashed. |
 | Ordering | Nothing ordered. |
 
 ## Next steps

@@ -12,7 +12,7 @@ install_crate = { crate_name = "cargo-binutils", binary = "cargo", test_arg = [
     "--help",
 ] }
 command = "cargo"
-args = ["objcopy", "--release", "--", "-O", "ihex", "boethia60.hex"]
+args = ["objcopy", "--release", "--", "-O", "ihex", "polymetis.hex"]
 dependencies = ["install-llvm-tools", "flip-link"]
 
 [tasks.uf2]
@@ -24,9 +24,9 @@ command = "cargo"
 args = [
     "hex-to-uf2",
     "--input-path",
-    "boethia60.hex",
+    "polymetis.hex",
     "--output-path",
-    "boethia60.uf2",
+    "polymetis.uf2",
     "--family",
     "rp2040",
 ]

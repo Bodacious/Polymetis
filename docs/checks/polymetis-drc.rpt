@@ -1,5 +1,5 @@
-** Drc report for boethia60.kicad_pcb **
-** Created on 2026-10-15T22:00:39+0000 **
+** Drc report for polymetis.kicad_pcb **
+** Created on 2026-10-15T22:15:01+0000 **
 ** Report includes: Errors, Warnings, Exclusions **
 
 ** Found 88 DRC violations **
@@ -259,14 +259,6 @@
     @(18.6670 mm, 4.0550 mm): Reference field of USB1
 [silk_overlap]: Silkscreen overlap
     Rule: board setup constraints silk; warning
-    @(20.3190 mm, 4.2894 mm): Segment of R6 on F.Silkscreen
-    @(18.6670 mm, 4.0550 mm): Reference field of USB1
-[silk_overlap]: Silkscreen overlap
-    Rule: board setup constraints silk; warning
-    @(19.5590 mm, 4.2894 mm): Segment of R6 on F.Silkscreen
-    @(18.6670 mm, 4.0550 mm): Reference field of USB1
-[silk_overlap]: Silkscreen overlap
-    Rule: board setup constraints silk; warning
     @(30.1500 mm, 85.1997 mm): Reference field of Y1
     @(29.7652 mm, 84.9420 mm): Segment of C4 on F.Silkscreen
 [silk_overlap]: Silkscreen overlap
@@ -277,6 +269,14 @@
     Rule: board setup constraints silk; warning
     @(12.7464 mm, 77.4026 mm): Segment of C13 on F.Silkscreen
     @(12.9624 mm, 77.2948 mm): Reference field of C5
+[silk_overlap]: Silkscreen overlap
+    Rule: board setup constraints silk; warning
+    @(19.5590 mm, 4.2894 mm): Segment of R6 on F.Silkscreen
+    @(18.6670 mm, 4.0550 mm): Reference field of USB1
+[silk_overlap]: Silkscreen overlap
+    Rule: board setup constraints silk; warning
+    @(20.3190 mm, 4.2894 mm): Segment of R6 on F.Silkscreen
+    @(18.6670 mm, 4.0550 mm): Reference field of USB1
 
 ** Found 0 unconnected pads **
 
