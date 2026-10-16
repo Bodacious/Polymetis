@@ -34,6 +34,7 @@ The HHKB Professional 2 bottom row has a 6u space bar and a 1.5u gap on the left
 | Top plate, 1.2 mm FR4 | 1 | `top-plate/` |
 | Bottom plate, 1.6 mm FR4 | 1 | `bottom-plate/` |
 | Printed middle frame, 5.3 mm | 1 | `case/polymetis-frame.stl` |
+| Rubber feet | 4 | tall enough for your USB-C plug: half the plug's thickness minus 2 mm (see `docs/checks/pre-order-verification.md`) |
 | M2 screws and nuts | 8 | through top plate, frame and bottom plate (8.1 mm stack) |
 | Low-profile keycaps with a cross (MX) stem | 60 | 51 × 1u, 4 × 1.5u, 2 × 1.75u, 2 × 2.25u, 1 × 6.25u |
 

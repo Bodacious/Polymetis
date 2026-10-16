@@ -65,6 +65,7 @@ Defined in `firmware/keyboard.toml`. Any key can be changed live in the Vial app
 | Bottom plate | Done. Assumes the "Polymetis" text faces outwards so the USB notch lines up with the frame opening. |
 | Frame | `case/polymetis-frame.stl`, watertight. |
 | Firmware | Builds; `cargo make uf2` makes `polymetis.uf2`. Not flashed. |
+| Pre-order checks | Plates, frame, USB opening and firmware matrix all cross-checked (`tools/verify/run.sh`, results in `docs/checks/pre-order-verification.md`). The USB-C plug sits low: fit rubber feet at least half the plug's thickness minus 2 mm. |
 | Ordering | Nothing ordered. |
 
 ## Next steps
